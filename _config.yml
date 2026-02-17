@@ -3,5 +3,4 @@ url: "https://alimahdavi79.github.io"
 baseurl: "/TechNet"
 
 markdown: kramdown
-# این خط باعث می‌شود پوشه‌های استایل شما نادیده گرفته نشوند
-include: [assets, css]
+exclude: [README.md]
