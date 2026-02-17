@@ -1,3 +1,7 @@
-remote_theme: pages-themes/minimal@v0.2.0
-plugins:
-  - jekyll-remote-theme
+title: TECHNET
+url: "https://alimahdavi79.github.io"
+baseurl: "/TechNet"
+
+markdown: kramdown
+# این خط باعث می‌شود پوشه‌های استایل شما نادیده گرفته نشوند
+include: [assets, css]
