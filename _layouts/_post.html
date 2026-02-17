@@ -1,29 +1,34 @@
 ---
 layout: default
 ---
-<article class="container py-5">
-    <div class="row justify-content-center">
-        <div class="col-lg-10">
-            <header class="mb-5 text-center">
-                <h1 class="display-4 fw-bold" style="color: var(--primary-color);">{{ page.title }}</h1>
-                <div class="text-muted mt-3">
-                    <span class="me-3"><i class="bi bi-calendar"></i> {{ page.date | date: "%Y/%m/%d" }}</span>
-                    {% if page.author %}
-                    <span><i class="bi bi-person"></i> نویسنده: {{ page.author }}</span>
-                    {% endif %}
+
+<article class="post-full">
+    <header class="post-header container">
+        <div class="post-header-content">
+            <span class="post-category">تکنولوژی</span>
+            <h1 class="post-title">{{ page.title }}</h1>
+            <div class="post-author">
+                <div class="avatar">
+                    <img src="https://ui-avatars.com/api/?name={{ page.author | default: 'Admin' }}&background=random" alt="Avatar">
                 </div>
-                {% if page.image %}
-                <img src="{{ page.image | relative_url }}" class="img-fluid rounded-4 shadow-lg mt-4" alt="{{ page.title }}" style="max-height: 500px; width: 100%; object-fit: cover;">
-                {% endif %}
-            </header>
-
-            <div class="content fs-5 lh-lg" style="text-align: justify; color: #333;">
-                {{ content }}
+                <div class="info">
+                    <strong>{{ page.author | default: "نویسنده مهمان" }}</strong>
+                    <span>{{ page.date | date: "%Y/%m/%d" }} • زمان مطالعه: ۵ دقیقه</span>
+                </div>
             </div>
+        </div>
+    </header>
 
-            <div class="mt-5 border-top pt-4">
-                <a href="{{ '/blog.html' | relative_url }}" class="btn btn-read-more">← بازگشت به وبلاگ</a>
-            </div>
+    <div class="post-content container">
+        {{ content }}
+    </div>
+
+    <div class="post-footer container">
+        <hr>
+        <div class="share-box">
+            <span>اگر مفید بود، به اشتراک بگذارید:</span>
+            <button class="btn-share telegram">تلگرام</button>
+            <button class="btn-share twitter">توییتر</button>
         </div>
     </div>
 </article>
