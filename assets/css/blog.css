@@ -1,0 +1,218 @@
+/* تنظیمات پایه و متغیرها */
+:root {
+    --primary: #4f46e5;       /* رنگ اصلی: بنفش نیلگون */
+    --primary-hover: #4338ca;
+    --text-main: #111827;     /* متن تیره */
+    --text-muted: #6b7280;    /* متن خاکستری */
+    --bg-body: #f3f4f6;       /* پس زمینه کلی */
+    --bg-card: #ffffff;
+    --radius: 16px;           /* میزان گردی گوشه‌ها */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --container-width: 1100px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    font-family: 'Vazirmatn', sans-serif;
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    margin: 0;
+    line-height: 1.8;
+    overflow-x: hidden;
+}
+
+a { text-decoration: none; color: inherit; transition: 0.3s; }
+ul { list-style: none; padding: 0; margin: 0; }
+
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- Header (Glassmorphism) --- */
+.site-header {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px); /* افکت شیشه‌ای */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.logo {
+    font-weight: 900;
+    font-size: 1.4rem;
+    color: var(--text-main);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.logo i { color: var(--primary); }
+
+.nav-links { display: flex; gap: 30px; }
+.nav-links a { font-weight: 500; color: var(--text-muted); position: relative; }
+.nav-links a:hover, .nav-links a.active { color: var(--primary); }
+
+/* --- Hero Section --- */
+.hero-section {
+    text-align: center;
+    padding: 80px 0 60px;
+    background: linear-gradient(180deg, rgba(79, 70, 229, 0.05) 0%, transparent 100%);
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    margin: 10px 0;
+    letter-spacing: -1px;
+    background: linear-gradient(to right, #2563eb, #9333ea);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.badge {
+    background: #e0e7ff;
+    color: var(--primary);
+    padding: 5px 15px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+/* --- Blog Grid --- */
+.post-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin-bottom: 80px;
+}
+
+.post-card {
+    background: var(--bg-card);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.4s ease;
+    border: 1px solid rgba(0,0,0,0.02);
+    display: flex;
+    flex-direction: column;
+}
+
+.post-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+}
+
+.card-image {
+    height: 200px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.post-card:hover .card-image img { transform: scale(1.05); }
+
+.image-placeholder { color: white; font-size: 3rem; opacity: 0.5; }
+
+.card-content { padding: 25px; display: flex; flex-direction: column; flex-grow: 1; }
+.card-meta { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 10px; display: flex; justify-content: space-between; }
+.tag { color: var(--primary); font-weight: bold; }
+
+.post-card h2 { margin: 0 0 10px; font-size: 1.3rem; line-height: 1.4; }
+.post-card p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 20px; flex-grow: 1; }
+
+.read-btn {
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+.read-btn:hover { gap: 10px; } /* افکت حرکتی فلش */
+
+/* --- Single Post Page --- */
+.post-header {
+    text-align: center;
+    padding: 60px 0 40px;
+    max-width: 800px;
+}
+
+.post-title { font-size: 2.5rem; font-weight: 900; color: var(--text-main); margin: 20px 0; }
+
+.post-author {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.post-author .avatar img { width: 50px; height: 50px; border-radius: 50%; }
+.post-author .info { text-align: right; font-size: 0.9rem; display: flex; flex-direction: column; }
+
+.post-content {
+    max-width: 740px; /* عرض استاندارد برای مطالعه راحت */
+    background: var(--bg-card);
+    padding: 40px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    font-size: 1.1rem;
+    line-height: 2;
+    color: #374151;
+}
+
+/* استایل محتوای داخل پست (Markdown output) */
+.post-content h2 { font-size: 1.8rem; margin-top: 2rem; color: var(--text-main); }
+.post-content p { margin-bottom: 1.5rem; }
+.post-content img { max-width: 100%; border-radius: 12px; margin: 20px 0; }
+.post-content blockquote {
+    border-right: 4px solid var(--primary);
+    background: #f9fafb;
+    margin: 20px 0;
+    padding: 15px 20px;
+    font-style: italic;
+    color: #555;
+}
+
+/* --- Footer --- */
+.site-footer {
+    background: var(--bg-card);
+    padding: 40px 0;
+    margin-top: 60px;
+    text-align: center;
+    border-top: 1px solid var(--text-muted);
+}
+.socials { margin-top: 20px; }
+.socials a { font-size: 1.2rem; margin: 0 10px; color: var(--text-muted); }
+.socials a:hover { color: var(--primary); }
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    .navbar { flex-direction: column; height: auto; padding: 15px 0; }
+    .nav-links { margin-top: 15px; font-size: 0.9rem; }
+    .hero-section h1 { font-size: 2rem; }
+    .post-content { padding: 20px; font-size: 1rem; }
+    .post-title { font-size: 1.8rem; }
+}
