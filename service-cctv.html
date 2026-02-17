@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نصب دوربین مداربسته | TECHNET</title>
+    
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <style>
+        /* انیمیشن چرخش دور لنز */
+        .cctv-lens {
+            position: relative;
+            display: inline-block;
+            z-index: 1;
+        }
+        .cctv-lens::after {
+            content: '';
+            position: absolute;
+            top: 50%; left: 50%;
+            width: 140px; height: 140px;
+            border: 2px dashed #0dcaf0;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            animation: rotate 15s linear infinite;
+            z-index: -1;
+        }
+        @keyframes rotate { 
+            from { transform: translate(-50%, -50%) rotate(0deg); } 
+            to { transform: translate(-50%, -50%) rotate(360deg); } 
+        }
+        
+        .feature-card-cctv {
+            border-bottom: 4px solid #0d6efd;
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        .feature-card-cctv:hover {
+            background: #fff;
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important;
+        }
+
+        /* استایل گوشی موبایل */
+        .mobile-preview {
+            background: #111;
+            border: 12px solid #222;
+            border-radius: 40px;
+            padding: 0;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.3);
+            aspect-ratio: 9/19;
+        }
+        .mobile-preview img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.8;
+        }
+        .overlay-text {
+            background: rgba(0,0,0,0.5);
+            backdrop-filter: blur(5px);
+            padding: 10px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top navbar-light">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary fs-3" href="index.html">TECHNET</a>
+            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-content="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">خانه</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">درباره ما</a></li>
+                    <li class="nav-item"><a class="nav-link active fw-bold" href="service-cctv.html">دوربین مداربسته</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">تماس با ما</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header text-center">
+        <div class="container">
+            <div class="cctv-lens mb-4">
+                <i class="bi bi-camera-video-fill display-1 text-info"></i>
+            </div>
+            <h1 class="display-4 fw-bold mb-3">امنیت هوشمند با <span class="text-info">TECHNET</span></h1>
+            <p class="lead opacity-75">نصب تخصصی سیستم‌های نظارتی IP و پروژه های تحت شبکه با ضمانت کتبی</p>
+        </div>
+    </header>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-4 text-center">
+                <div class="col-md-3">
+                    <div class="modern-card feature-card-cctv p-4">
+                        <i class="bi bi-moon-stars-fill fs-1 text-primary mb-3 d-block"></i>
+                        <h6 class="fw-bold">دید در شب رنگی</h6>
+                        <p class="small text-muted mb-0">تصویر کاملاً رنگی و شفاف حتی در تاریکی مطلق محیط.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="modern-card feature-card-cctv p-4">
+                        <i class="bi bi-phone-vibrate-fill fs-1 text-primary mb-3 d-block"></i>
+                        <h6 class="fw-bold">انتقال تصویر هوشمند</h6>
+                        <p class="small text-muted mb-0">کنترل کامل محیط روی موبایل (iOS/Android) از راه دور.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="modern-card feature-card-cctv p-4">
+                        <i class="bi bi-person-bounding-box fs-1 text-primary mb-3 d-block"></i>
+                        <h6 class="fw-bold">تشخیص چهره و حرکت</h6>
+                        <p class="small text-muted mb-0">الگوریتم‌های هوشمند برای کاهش آلارم‌های خطا و امنیت بالا.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="modern-card feature-card-cctv p-4">
+                        <i class="bi bi-shield-lock-fill fs-1 text-primary mb-3 d-block"></i>
+                        <h6 class="fw-bold">پایداری و امنیت داده</h6>
+                        <p class="small text-muted mb-0">رمزنگاری تصاویر و استفاده از هاردهای تخصصی بنفش.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <h2 class="fw-bold mb-4">نظارت کامل، در <span class="text-primary">دستان شما</span></h2>
+                    <p class="text-muted lh-lg mb-4">
+                        تیم فنی TECHNET با سابقه اجرای پروژه‌های صنعتی و مسکونی، بهترین برندها (Hikvision, Dahua) را متناسب با بودجه شما پیشنهاد می‌دهد. ما فقط فروشنده نیستیم، ما مشاور امنیتی شما هستیم.
+                    </p>
+                    <div class="row g-3 mb-4">
+                        <div class="col-6"><i class="bi bi-check2-circle text-primary me-2"></i> گارانتی ۲۴ ماهه تعویض</div>
+                        <div class="col-6"><i class="bi bi-check2-circle text-primary me-2"></i> بازدید و کارشناسی رایگان</div>
+                        <div class="col-6"><i class="bi bi-check2-circle text-primary me-2"></i> کابل‌کشی استاندارد</div>
+                        <div class="col-6"><i class="bi bi-check2-circle text-primary me-2"></i> انتقال تصویر رایگان</div>
+                    </div>
+                    <a href="contact.html" class="btn btn-main btn-lg px-5 shadow">استعلام قیمت و مشاوره</a>
+                </div>
+                <div class="col-lg-6">
+                    <div class="mobile-preview mx-auto" style="max-width: 280px;">
+                        <img src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?q=80&w=500" alt="نظارت تصویری">
+                        <div class="position-absolute top-50 start-50 translate-middle text-white text-center w-75">
+                            <div class="overlay-text">
+                                <i class="bi bi-play-circle-fill display-4 mb-2 d-block"></i>
+                                <span class="small fw-bold">Live: Parking Entrance</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-5 bg-dark text-white text-center">
+        <div class="container">
+            <h4 class="fw-bold text-primary mb-3">TECHNET</h4>
+            <p class="small text-white-50">تمامی حقوق برای TECHNET محفوظ است | ۱۴۰۳</p>
+            <div class="mt-3">
+                <a href="contact.html" class="text-white-50 text-decoration-none mx-2 small">تماس با ما</a>
+                <a href="about.html" class="text-white-50 text-decoration-none mx-2 small">درباره ما</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

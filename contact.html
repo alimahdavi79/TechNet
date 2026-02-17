@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تماس با ما | TECHNET</title>
+    
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+      <link rel="stylesheet" href="assets/css/style.css">
+
+
+    <style>
+        .contact-info-card {
+            height: auto !important;
+            padding: 20px !important;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            border-right: 4px solid #0d6efd;
+        }
+        
+        .contact-icon-box {
+            width: 50px; height: 50px; min-width: 50px;
+            background: var(--primary-grad);
+            color: white;
+            border-radius: 12px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.3rem;
+            margin-left: 15px;
+        }
+
+        .contact-text-box h6 { font-weight: 800; margin-bottom: 2px; }
+        .contact-text-box p, .contact-text-box a { font-size: 0.9rem; margin-bottom: 0; }
+
+        .social-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-top: 15px;
+        }
+        .social-btn {
+            aspect-ratio: 1/1;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            color: white !important;
+            transition: 0.3s;
+            text-decoration: none;
+        }
+        .social-btn:hover { transform: translateY(-3px); opacity: 0.9; }
+        
+        .whatsapp { background: #25D366; }
+        .telegram { background: #0088cc; }
+        .bale { background: #189871; }
+        
+        /* استایل وضعیت ارسال */
+        #form-result {
+            font-size: 0.9rem;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top navbar-light">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary fs-3" href="index.html">TECHNET</a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">خانه</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">درباره ما</a></li>
+                    <li class="nav-item"><a class="nav-link active fw-bold" href="contact.html">تماس با ما</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container text-center">
+            <h1 class="display-5 fw-bold mb-2">با ما در <span class="text-info">ارتباط باشید</span></h1>
+            <p class="opacity-75">مشاوره رایگان و استعلام فوری پروژه‌های شما</p>
+        </div>
+    </header>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-4 justify-content-center">
+                
+                <div class="col-lg-4">
+                    <div class="modern-card contact-info-card">
+                        <div class="contact-icon-box"><i class="bi bi-telephone"></i></div>
+                        <div class="contact-text-box">
+                            <h6>تلفن مستقیم</h6>
+                            <a href="tel:09109694902" class="text-primary text-decoration-none fw-bold">۰۹۱۰۹۶۹۴۹۰۲</a>
+                        </div>
+                    </div>
+
+                    <div class="modern-card contact-info-card">
+                        <div class="contact-icon-box"><i class="bi bi-geo-alt"></i></div>
+                        <div class="contact-text-box">
+                            <h6>محدوده خدمات</h6>
+                            <p class="text-muted">تهران و حومه (در محل)</p>
+                        </div>
+                    </div>
+
+                    <div class="modern-card contact-info-card">
+                        <div class="contact-icon-box"><i class="bi bi-clock"></i></div>
+                        <div class="contact-text-box">
+                            <h6>ساعات کاری</h6>
+                            <p class="text-muted">شنبه تا ۵شنبه (۸ الی ۲۰)</p>
+                        </div>
+                    </div>
+
+                    <div class="modern-card mt-3" style="height: auto !important; padding: 20px !important;">
+                        <h6 class="fw-bold mb-3 small">پیام در شبکه‌های اجتماعی:</h6>
+                        <div class="social-grid">
+                            <a href="https://wa.me/989109694902" target="_blank" class="social-btn whatsapp"><i class="bi bi-whatsapp"></i></a>
+                            <a href="https://t.me/989109694902" target="_blank" class="social-btn telegram"><i class="bi bi-telegram"></i></a>
+                            <a href="https://ble.ir/989109694902" target="_blank" class="social-btn bale"><i class="bi bi-chat-dots-fill"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="modern-card p-4">
+                        <h4 class="fw-bold mb-4">ثبت پیام هوشمند</h4>
+                        <form id="contact-form">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="form-floating mb-2">
+                                        <input type="text" name="Name" class="form-control border-0 bg-light shadow-none" placeholder="نام" required>
+                                        <label>نام و نام خانوادگی</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating mb-2">
+                                        <input type="tel" name="Email" class="form-control border-0 bg-light shadow-none" placeholder="تلفن" required>
+                                        <label>شماره تماس</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating mb-2">
+                                        <select name="Subject" class="form-select border-0 bg-light shadow-none">
+                                            <option value="بررسی کلی">انتخاب موضوع...</option>
+                                            <option value="خدمات کامپیوتری">خدمات کامپیوتری</option>
+                                            <option value="راه اندازی شبکه">راه اندازی شبکه</option>
+                                            <option value="نصب دوربین مداربسته">نصب دوربین مداربسته</option>
+                                            <option value="سایر موارد">سایر موارد</option>
+                                        </select>
+                                        <label>موضوع درخواست</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating mb-3">
+                                        <textarea name="Message" class="form-control border-0 bg-light shadow-none" placeholder="متن" style="height: 120px" required></textarea>
+                                        <label>توضیحات کوتاه...</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" id="submit-btn" class="btn btn-main w-100 py-3 shadow">ارسال نهایی درخواست</button>
+                                </div>
+                                <div class="col-12">
+                                    <div id="form-result" class="p-2 text-center d-none"></div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-4 bg-dark text-white text-center">
+        <div class="container small text-white-50">
+            <p class="mb-0">© ۱۴۰۳ TECHNET - تمامی حقوق محفوظ است</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzktQORoEOfIq2r2mPGDp9J70dNZ3wYEXWQVd5HT2_yhTcSRhhA2_mpnal1dx7To7Nbow/exec';
+        const form = document.getElementById('contact-form');
+        const btn = document.getElementById('submit-btn');
+        const resultDiv = document.getElementById('form-result');
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            
+            btn.disabled = true;
+            btn.innerHTML = 'در حال ارسال...';
+            resultDiv.classList.remove('d-none', 'alert-success', 'alert-danger');
+            resultDiv.classList.add('alert-info');
+            resultDiv.innerHTML = "در حال برقراری ارتباط با سرور...";
+
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => {
+                    btn.disabled = false;
+                    btn.innerHTML = 'ارسال نهایی درخواست';
+                    resultDiv.classList.replace('alert-info', 'alert-success');
+                    resultDiv.innerHTML = "درخواست شما با موفقیت ثبت شد. به زودی با شما تماس می‌گیریم.";
+                    form.reset();
+                })
+                .catch(error => {
+                    btn.disabled = false;
+                    btn.innerHTML = 'ارسال مجدد درخواست';
+                    resultDiv.classList.replace('alert-info', 'alert-danger');
+                    resultDiv.innerHTML = "خطایی رخ داد! لطفاً دوباره تلاش کنید.";
+                    console.error('Error!', error.message);
+                });
+        });
+    </script>
+</body>
+</html>

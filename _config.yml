@@ -1,0 +1,8 @@
+title: TECHNET
+description: خدمات تخصصی شبکه و امنیت
+baseurl: "" # اگر سایت در دامین اصلی است خالی بماند
+url: "https://yourusername.github.io"
+
+# تنظیمات برای شناسایی بهتر فایل‌ها
+markdown: kramdown
+permalink: /blog/:title/  # آدرس مقالات به این شکل می‌شود
