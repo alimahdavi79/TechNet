@@ -1,55 +1,115 @@
+/* --- استایل‌های پایه شما (بدون تغییر) --- */
+body { font-family: 'Vazirmatn', sans-serif; background-color: #f4f7fa; color: #2d3436; overflow-x: hidden; direction: rtl; }
+
 :root {
-    --primary-color: #0a2342;
-    --secondary-color: #2ca58d;
-    --accent-color: #00d2ff;
-    --bg-light: #f8f9fa;
-    --white: #ffffff;
+    --primary-grad: linear-gradient(135deg, #0d6efd 0%, #00d2ff 100%);
+    --dark-blue: #0a192f;
+    --glass-bg: rgba(255, 255, 255, 0.9);
+    --accent-blue: #0d6efd;
 }
 
-/* اعمال فونت و راست‌چین به کل سایت */
-body {
-    font-family: 'Vazirmatn', sans-serif !important;
-    direction: rtl;
-    text-align: right;
-    background-color: var(--bg-light);
+.navbar { background: var(--glass-bg) !important; backdrop-filter: blur(10px); border-bottom: 1px solid rgba(0,0,0,0.05); }
+
+.page-header {
+    background: var(--dark-blue);
+    background-image: radial-gradient(circle at 20% 30%, rgba(13, 110, 253, 0.2) 0%, transparent 50%);
+    color: white;
+    padding: 140px 0 80px;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
 }
 
-/* هدر و فوتر یکپارچه */
-.navbar {
-    background: linear-gradient(135deg, var(--primary-color) 0%, #1a3a5f 100%) !important;
-    padding: 1rem 0;
+.modern-card {
+    background: white;
+    border: none;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+    transition: all 0.3s ease;
+    height: 100%;
 }
+.modern-card:hover { transform: translateY(-10px); box-shadow: 0 15px 35px rgba(13, 110, 253, 0.1); }
 
-footer {
-    background-color: var(--primary-color) !important;
-    color: var(--white);
-}
-
-/* استایل محتوای داخل مقالات */
-.content h2, .content h3 {
-    color: var(--primary-color);
-    margin-top: 2rem;
-    border-right: 5px solid var(--accent-color);
-    padding-right: 15px;
-}
-
-.content p {
-    margin-bottom: 1.5rem;
-}
-
-/* دکمه‌های یکسان در کل سایت */
-.btn-read-more {
-    background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
-    color: white !important;
+.btn-main {
+    background: var(--primary-grad);
+    color: white;
     border: none;
     border-radius: 50px;
-    padding: 10px 30px;
+    padding: 12px 35px;
+    font-weight: bold;
     transition: 0.3s;
     text-decoration: none;
     display: inline-block;
 }
+.btn-main:hover { transform: scale(1.05); color: white; box-shadow: 0 8px 20px rgba(13, 110, 253, 0.3); }
 
-.btn-read-more:hover {
-    transform: scale(1.05);
-    box-shadow: 0 5px 15px rgba(0, 210, 255, 0.3);
+.icon-circle {
+    width: 65px; height: 65px;
+    background: rgba(13, 110, 253, 0.1);
+    color: #0d6efd;
+    border-radius: 18px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.8rem; margin-bottom: 20px;
+}
+
+/* --- استایل‌های اختصاصی وبلاگ و مقالات (اضافه شده) --- */
+
+/* استایل تصویر مقالات در لیست */
+.blog-thumb {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+/* نشان (Badge) دسته‌بندی مقالات */
+.post-category {
+    background: rgba(13, 110, 253, 0.1);
+    color: var(--accent-blue);
+    padding: 5px 15px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+/* استایل داخل صفحه مقاله (Single Post) */
+.post-content {
+    background: white;
+    padding: 40px;
+    border-radius: 30px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.05);
+    line-height: 2;
+    text-align: justify;
+}
+
+.post-content h2, .post-content h3 {
+    color: var(--dark-blue);
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    border-right: 5px solid var(--accent-blue);
+    padding-right: 15px;
+}
+
+.post-content p {
+    margin-bottom: 25px;
+    color: #444;
+}
+
+/* فوتر مقالات */
+.post-footer {
+    background: var(--dark-blue);
+    color: white;
+    padding: 60px 0;
+    margin-top: 80px;
+}
+
+/* استایل عکس شاخص داخل مقاله */
+.featured-image {
+    width: 100%;
+    border-radius: 25px;
+    margin-bottom: 40px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
 }
