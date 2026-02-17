@@ -1,16 +1,10 @@
 title: TECHNET
-description: خدمات تخصصی شبکه و امنیت
-remote_theme: pages-themes/minimal@v0.2.0
-
-# تنظیمات آدرس‌دهی (بسیار حیاتی)
 url: "https://alimahdavi79.github.io"
 baseurl: "/TechNet"
 
-# تنظیمات محتوا
+# این بخش باعث می‌شود جکیل فایل‌های CSS تو را شناسایی کند
+include: [assets, css]
 markdown: kramdown
-permalink: /blog/:title/
 
-# فایل‌هایی که جکیل باید نادیده بگیرد
-exclude:
-  - README.md
-  - node_modules
+# تنظیمات نمایش مقالات
+permalink: /blog/:title/
