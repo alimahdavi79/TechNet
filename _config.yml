@@ -1,10 +1,3 @@
-title: TECHNET
-url: "https://alimahdavi79.github.io"
-baseurl: "/TechNet"
-
-# این بخش باعث می‌شود جکیل فایل‌های CSS تو را شناسایی کند
-include: [assets, css]
-markdown: kramdown
-
-# تنظیمات نمایش مقالات
-permalink: /blog/:title/
+remote_theme: pages-themes/minimal@v0.2.0
+plugins:
+  - jekyll-remote-theme
