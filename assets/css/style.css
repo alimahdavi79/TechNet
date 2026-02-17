@@ -1,72 +1,55 @@
 :root {
-    --primary-color: #0a2342;    /* سرمه‌ای امنیتی */
-    --secondary-color: #2ca58d;  /* سبز کله‌غازی (تکنولوژی) */
-    --accent-color: #00d2ff;     /* آبی روشن الکتریک */
-    --bg-light: #f4f7f6;
-    --text-dark: #1b262c;
+    --primary-color: #0a2342;
+    --secondary-color: #2ca58d;
+    --accent-color: #00d2ff;
+    --bg-light: #f8f9fa;
     --white: #ffffff;
 }
 
+/* اعمال فونت و راست‌چین به کل سایت */
 body {
+    font-family: 'Vazirmatn', sans-serif !important;
+    direction: rtl;
+    text-align: right;
     background-color: var(--bg-light);
-    color: var(--text-dark);
-    line-height: 1.8;
 }
 
-/* هدر و ناوبری */
+/* هدر و فوتر یکپارچه */
 .navbar {
     background: linear-gradient(135deg, var(--primary-color) 0%, #1a3a5f 100%) !important;
-    border-bottom: 3px solid var(--accent-color);
+    padding: 1rem 0;
 }
 
-/* استایل کارت‌های بلاگ */
-.blog-card {
-    border: none;
-    background-color: var(--white);
-    border-radius: 20px;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+footer {
+    background-color: var(--primary-color) !important;
+    color: var(--white);
 }
 
-/* هاور پیشرفته کارت */
-.blog-card:hover {
-    transform: translateY(-12px);
-    box-shadow: 0 20px 40px rgba(10, 35, 66, 0.15);
-    border-bottom: 5px solid var(--accent-color);
+/* استایل محتوای داخل مقالات */
+.content h2, .content h3 {
+    color: var(--primary-color);
+    margin-top: 2rem;
+    border-right: 5px solid var(--accent-color);
+    padding-right: 15px;
 }
 
-.blog-card img {
-    border-radius: 20px 20px 0 0;
-    filter: grayscale(20%);
-    transition: 0.3s;
+.content p {
+    margin-bottom: 1.5rem;
 }
 
-.blog-card:hover img {
-    filter: grayscale(0%);
-}
-
-/* دکمه مطالعه مقاله */
+/* دکمه‌های یکسان در کل سایت */
 .btn-read-more {
-    background: linear-gradient(to left, var(--secondary-color), var(--accent-color));
-    color: white;
+    background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+    color: white !important;
     border: none;
     border-radius: 50px;
-    padding: 8px 25px;
-    font-weight: bold;
+    padding: 10px 30px;
     transition: 0.3s;
+    text-decoration: none;
+    display: inline-block;
 }
 
 .btn-read-more:hover {
-    letter-spacing: 1px;
-    color: white;
-    box-shadow: 0 5px 15px rgba(0, 210, 255, 0.4);
-}
-
-/* استایل متن‌ها */
-h1, h2, h3 {
-    color: var(--primary-color);
-}
-
-.text-accent {
-    color: var(--secondary-color) !important;
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 210, 255, 0.3);
 }
