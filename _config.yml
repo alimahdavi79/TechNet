@@ -1,6 +1,0 @@
-title: TECHNET
-url: "https://alimahdavi79.github.io"
-baseurl: "/TechNet"
-
-markdown: kramdown
-exclude: [README.md]
