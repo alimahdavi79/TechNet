@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TECHNET | راهکارهای هوشمند فناوری و امنیت</title>
+    
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+     <link rel="stylesheet" href="assets/css/style.css">
+
+
+    <style>
+        /* استایل‌های اختصاصی برای انیمیشن‌ها و جزئیات صفحه اصلی */
+        .hero-img-box {
+            position: relative;
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        .stat-box {
+            border-left: 2px solid rgba(13, 110, 253, 0.2);
+            padding-right: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top navbar-light">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary fs-3" href="index.html">TECHNET</a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">  
+                    <li class="nav-item ps-3"><a class="nav-link active fw-bold" href="index.html">خانه</a></li>
+                    <li class="nav-item"><a class="nav-link " href="blog.html">بلاگ</a></li>
+                    
+                    <li class="nav-item ps-3"><a class="nav-link" href="about.html">درباره ما</a></li>
+                    <li class="nav-item ps-3"><a class="nav-link" href="contact.html">تماس با ما</a></li>
+                </ul>
+                <a href="tel:09109694902" class="btn btn-main d-none d-lg-block">
+                    <i class="bi bi-telephone-outbound me-2"></i> ۰۹۱۰۹۶۹۴۹۰۲
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7 text-center text-lg-start">
+                    <span class="badge bg-primary mb-3 px-3 py-2 rounded-pill shadow-sm">تخصص در دنیای دیجیتال</span>
+                    <h1 class="display-3 fw-bold mb-4 lh-base">هوشمندسازی زیرساخت‌های <span class="text-info">تکنولوژی و امنیت</span></h1>
+                    <p class="lead opacity-75 mb-5 fs-5">ارائه خدمات تخصصی شبکه، دوربین مداربسته و تعمیرات سخت‌افزاری توسط تیم فنی مهندس مهدوی با بیش از ۱۰ سال سابقه درخشان.</p>
+                    <div class="d-flex justify-content-center justify-content-lg-start gap-3">
+                        <a href="#services" class="btn btn-main btn-lg px-5">مشاهده خدمات</a>
+                        <a href="contact.html" class="btn btn-outline-light btn-lg rounded-pill px-5">درخواست مشاوره</a>
+                    </div>
+                </div>
+                <div class="col-lg-5 d-none d-lg-block text-center">
+                    <div class="hero-img-box">
+                        <i class="bi bi-cpu-fill text-white opacity-25" style="font-size: 20rem;"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="services" class="py-5">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h6 class="text-primary fw-bold">ما چه می‌کنیم؟</h6>
+                <h2 class="fw-bold display-6">خدمات تخصصی TECHNET</h2>
+                <div class="mx-auto bg-primary mt-3" style="width: 50px; height: 3px; border-radius: 2px;"></div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="modern-card">
+                        <div class="icon-circle"><i class="bi bi-pc-display"></i></div>
+                        <h4 class="fw-bold mb-3">خدمات کامپیوتری</h4>
+                        <p class="text-muted small mb-4">تعمیر تخصصی لپ‌تاپ، ارتقاء سیستم (SSD/RAM) و حل تمامی مشکلات نرم‌افزاری در سریع‌ترین زمان.</p>
+                        <a href="service-computer.html" class="text-primary fw-bold text-decoration-none">ورود به بخش <i class="bi bi-arrow-left ms-1"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="modern-card">
+                        <div class="icon-circle"><i class="bi bi-diagram-3-fill"></i></div>
+                        <h4 class="fw-bold mb-3">زیرساخت شبکه</h4>
+                        <p class="text-muted small mb-4">طراحی و اجرای پروژه‌های شبکه (پسیو و اکتیو)، کابل‌کشی استاندارد و راه‌اندازی سرورهای قدرتمند.</p>
+                        <a href="service-network.html" class="text-primary fw-bold text-decoration-none">ورود به بخش <i class="bi bi-arrow-left ms-1"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="modern-card">
+                        <div class="icon-circle"><i class="bi bi-shield-lock-fill"></i></div>
+                        <h4 class="fw-bold mb-3">دوربین مداربسته</h4>
+                        <p class="text-muted small mb-4">نصب سیستم‌های حفاظتی هوشمند، انتقال تصویر روی موبایل و دید در شب رنگی با کیفیت 4K واقعی.</p>
+                        <a href="service-cctv.html" class="text-primary fw-bold text-decoration-none">ورود به بخش <i class="bi bi-arrow-left ms-1"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-white">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <h2 class="fw-bold mb-4">چرا مشتریان به <span class="text-primary">TECHNET</span> اعتماد می‌کنند؟</h2>
+                    <p class="text-muted mb-4 lh-lg">ما در تک‌نت فقط سرویس ارائه نمی‌دهیم، بلکه برای امنیت و پایداری کسب‌وکار شما راهکار خلق می‌کنیم. استفاده از قطعات اصلی و پشتیبانی ۲۴ ساعته تفاوت ماست.</p>
+                    <div class="row g-4">
+                        <div class="col-6 stat-box">
+                            <h3 class="fw-bold text-primary mb-0">۵۰۰+</h3>
+                            <p class="small text-muted mb-0">پروژه موفق</p>
+                        </div>
+                        <div class="col-6 stat-box">
+                            <h3 class="fw-bold text-primary mb-0">۱۲+</h3>
+                            <p class="small text-muted mb-0">سال تجربه فنی</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="modern-card border-start border-primary border-5">
+                        <ul class="list-unstyled mb-0">
+                            <li class="mb-3 d-flex align-items-center"><i class="bi bi-patch-check-fill text-primary me-3 fs-4"></i> استفاده از برترین برندهای تجهیزات جهان</li>
+                            <li class="mb-3 d-flex align-items-center"><i class="bi bi-patch-check-fill text-primary me-3 fs-4"></i> گارانتی کتبی تمام خدمات انجام شده</li>
+                            <li class="mb-3 d-flex align-items-center"><i class="bi bi-patch-check-fill text-primary me-3 fs-4"></i> اعزام کارشناس به محل در کمترین زمان</li>
+                            <li class="d-flex align-items-center"><i class="bi bi-patch-check-fill text-primary me-3 fs-4"></i> مشاوره فنی کاملاً رایگان</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>    <!-- بخش مراحل انجام کار -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold text-dark">مراحل انجام کار در تک‌نت</h2>
+                <p class="text-muted">از اولین تماس تا پشتیبانی نهایی، قدم‌به‌قدم در کنار شما هستیم</p>
+            </div>
+            <div class="row g-4 text-center">
+                <!-- مرحله ۱ -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="modern-card h-100 border-0">
+                        <div class="icon-circle mx-auto mb-3" style="background-color: rgba(13, 110, 253, 0.1);">
+                            <i class="bi bi-headset text-primary fs-3"></i>
+                        </div>
+                        <h5 class="fw-bold">۱. مشاوره رایگان</h5>
+                        <p class="text-muted small mb-0">تماس با ما و بیان نیازها برای دریافت بهترین راهکار تخصصی</p>
+                    </div>
+                </div>
+                <!-- مرحله ۲ -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="modern-card h-100 border-0">
+                        <div class="icon-circle mx-auto mb-3" style="background-color: rgba(13, 110, 253, 0.1);">
+                            <i class="bi bi-search text-primary fs-3"></i>
+                        </div>
+                        <h5 class="fw-bold">۲. بازدید و کارشناسی</h5>
+                        <p class="text-muted small mb-0">بررسی دقیق محل پروژه یا سیستم شما توسط مهندس مهدوی</p>
+                    </div>
+                </div>
+                <!-- مرحله ۳ -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="modern-card h-100 border-0">
+                        <div class="icon-circle mx-auto mb-3" style="background-color: rgba(13, 110, 253, 0.1);">
+                            <i class="bi bi-gear-fill text-primary fs-3"></i>
+                        </div>
+                        <h5 class="fw-bold">۳. اجرای تخصصی</h5>
+                        <p class="text-muted small mb-0">استفاده از قطعات اصلی و نصب استاندارد با بالاترین کیفیت</p>
+                    </div>
+                </div>
+                <!-- مرحله ۴ -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="modern-card h-100 border-0">
+                        <div class="icon-circle mx-auto mb-3" style="background-color: rgba(13, 110, 253, 0.1);">
+                            <i class="bi bi-shield-check text-primary fs-3"></i>
+                        </div>
+                        <h5 class="fw-bold">۴. پشتیبانی مداوم</h5>
+                        <p class="text-muted small mb-0">ارائه گارانتی کتبی و پشتیبانی فنی بعد از اتمام پروژه</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+        <!-- استایل اختصاصی برای اسکرول افقی (این تگ را می‌توانید همینجا نگه دارید یا به style.css منتقل کنید) -->
+    <style>
+        .scrolling-wrapper {
+            overflow-x: auto;
+            overflow-y: hidden;
+            white-space: nowrap;
+            -webkit-overflow-scrolling: touch;
+            padding-bottom: 20px; /* فضا برای سایه پایین کارت‌ها */
+        }
+        /* استایل اسکرول‌بار سفارشی و باریک */
+        .scrolling-wrapper::-webkit-scrollbar {
+            height: 6px;
+        }
+        .scrolling-wrapper::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        .scrolling-wrapper::-webkit-scrollbar-thumb {
+            background: #ccc;
+            border-radius: 10px;
+        }
+        .scrolling-wrapper::-webkit-scrollbar-thumb:hover {
+            background: #aaa;
+        }
+        .card-block {
+            display: inline-block;
+            width: 350px; /* عرض ثابت کارت‌ها برای اسکرول */
+            white-space: normal; /* برای اینکه متن داخل کارت شکسته شود */
+            vertical-align: top;
+        }
+    </style>
+    <!-- بخش نظرات مشتریان (با اسکرول افقی) -->
+    <section class="py-5 bg-white">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-end mb-4">
+                <div>
+                    <h2 class="fw-bold text-dark">نظرات مشتریان تک‌نت</h2>
+                    <p class="text-muted mb-0">بیش از ۵۰۰ پروژه موفق؛ نظر برخی از مشتریان ما را بخوانید</p>
+                </div>
+                <!-- دکمه‌های راهنما برای اسکرول (نمایشی) -->
+                <div class="d-none d-md-block text-primary fs-4">
+                    <i class="bi bi-arrow-right-circle"></i>
+                    <i class="bi bi-arrow-left-circle"></i>
+                </div>
+            </div>
+
+            <!-- کانتینر اسکرول افقی -->
+            <div class="scrolling-wrapper py-2">
+                
+                <!-- نظر ۱ -->
+                <div class="card-block">
+                    <div class="modern-card border border-light h-100 p-4 shadow-sm" style="border-radius: 15px;">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="icon-circle bg-primary text-white ms-3 d-flex align-items-center justify-content-center" style="width: 45px; height: 45px; font-size: 1.2rem; border-radius: 50%;">
+                                <i class="bi bi-building"></i>
+                            </div>
+                            <div>
+                                <h6 class="fw-bold mb-1">شرکت بازرگانی آوا</h6>
+                                <div class="text-warning small"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                            </div>
+                        </div>
+                        <p class="text-muted small fst-italic mb-0">"پروژه کابل‌کشی پسیو و راه‌اندازی سرور شرکت ما با بالاترین دقت انجام شد. نظم داکت‌کشی و سرعت عمل تیم تک‌نت عالی بود."</p>
+                    </div>
+                </div>
+
+                <!-- نظر ۲ -->
+                <div class="card-block">
+                    <div class="modern-card border border-light h-100 p-4 shadow-sm" style="border-radius: 15px;">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="icon-circle bg-success text-white ms-3 d-flex align-items-center justify-content-center" style="width: 45px; height: 45px; font-size: 1.2rem; border-radius: 50%;">
+                                <i class="bi bi-shop"></i>
+                            </div>
+                            <div>
+                                <h6 class="fw-bold mb-1">فروشگاه زنجیره‌ای رفاه (شعبه ۲)</h6>
+                                <div class="text-warning small"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                            </div>
+                        </div>
+                        <p class="text-muted small fst-italic mb-0">"دوربین‌های مداربسته‌ای که نصب کردند دید در شب رنگی فوق‌العاده‌ای داره. انتقال تصویر روی موبایل مدیران بدون قطعی وصل شد."</p>
+                    </div>
+                </div>
+
+                <!-- نظر ۳ -->
+                <div class="card-block">
+                    <div class="modern-card border border-light h-100 p-4 shadow-sm" style="border-radius: 15px;">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="icon-circle bg-info text-white ms-3 d-flex align-items-center justify-content-center" style="width: 45px; height: 45px; font-size: 1.2rem; border-radius: 50%;">
+                                <i class="bi bi-laptop"></i>
+                            </div>
+                            <div>
+                                <h6 class="fw-bold mb-1">دکتر علیرضا محمدی</h6>
+                                <div class="text-warning small"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                            </div>
+                        </div>
+                        <p class="text-muted small fst-italic mb-0">"لپ‌تاپ مطب خیلی کند شده بود. با ارتقا به SSD و نصب ویندوز جدید الان مثل روز اول کار می‌کنه. ممنون از مهندس مهدوی."</p>
+                    </div>
+                </div>
+
+                <!-- نظر ۴ -->
+                <div class="card-block">
+                    <div class="modern-card border border-light h-100 p-4 shadow-sm" style="border-radius: 15px;">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="icon-circle bg-danger text-white ms-3 d-flex align-items-center justify-content-center" style="width: 45px; height: 45px; font-size: 1.2rem; border-radius: 50%;">
+                                <i class="bi bi-controller"></i>
+                            </div>
+                            <div>
+                                <h6 class="fw-bold mb-1">امید (گیمر حرفه‌ای)</h6>
+                                <div class="text-warning small"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                            </div>
+                        </div>
+                        <p class="text-muted small fst-italic mb-0">"اسمبل سیستم گیمینگ رو به تک‌نت سپردم. کیبل‌منیجمنت (مدیریت کابل) داخل کیس رو خیلی تمیز درآوردن و دما عالیه."</p>
+                    </div>
+                </div>
+
+                <!-- نظر ۵ -->
+                <div class="card-block">
+                    <div class="modern-card border border-light h-100 p-4 shadow-sm" style="border-radius: 15px;">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="icon-circle bg-dark text-white ms-3 d-flex align-items-center justify-content-center" style="width: 45px; height: 45px; font-size: 1.2rem; border-radius: 50%;">
+                                <i class="bi bi-shield-lock"></i>
+                            </div>
+                            <div>
+                                <h6 class="fw-bold mb-1">مدیریت ساختمان پارس</h6>
+                                <div class="text-warning small"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></div>
+                            </div>
+                        </div>
+                        <p class="text-muted small fst-italic mb-0">"برای امنیت پارکینگ و ورودی ساختمان با ایشان تماس گرفتیم. مشاوره دقیق دادن و دوربین‌ها پلاک‌خوان عالی نصب شد."</p>
+                    </div>
+                </div>
+
+                 <!-- نظر ۶ -->
+                 <div class="card-block">
+                    <div class="modern-card border border-light h-100 p-4 shadow-sm" style="border-radius: 15px;">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="icon-circle bg-warning text-white ms-3 d-flex align-items-center justify-content-center" style="width: 45px; height: 45px; font-size: 1.2rem; border-radius: 50%;">
+                                <i class="bi bi-hdd-network"></i>
+                            </div>
+                            <div>
+                                <h6 class="fw-bold mb-1">دفتر وکالت رحیمی</h6>
+                                <div class="text-warning small"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                            </div>
+                        </div>
+                        <p class="text-muted small fst-italic mb-0">"اطلاعات هارد اکسترنال ما پریده بود. خوشبختانه تمام داده‌ها رو ریکاوری کردن. واقعا نجاتمون دادن."</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- بخش سوالات متداول (۱۰ سوال در ۲ ستون) -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold text-dark">سوالات متداول</h2>
+                <p class="text-muted">پاسخ به ۱۰ سوال پرتکرار شما در مورد خدمات کامپیوتر، شبکه و دوربین</p>
+            </div>
+            
+            <div class="row">
+                <!-- ستون اول (سوالات ۱ تا ۵) -->
+                <div class="col-lg-6">
+                    <div class="accordion mb-3" id="faqLeft">
+                        <!-- Q1 -->
+                        <div class="accordion-item border-0 border-bottom mb-2 rounded overflow-hidden shadow-sm">
+                            <h2 class="accordion-header" id="h1">
+                                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#c1">
+                                    آیا خدمات نصب و تعمیرات دارای گارانتی است؟
+                                </button>
+                            </h2>
+                            <div id="c1" class="accordion-collapse collapse" data-bs-parent="#faqLeft">
+                                <div class="accordion-body text-muted small">بله، تمامی خدمات تک‌نت شامل گارانتی کتبی و مهلت تست است. قطعات مصرفی نیز دارای گارانتی اصلی شرکتی می‌باشند.</div>
+                            </div>
+                        </div>
+                        <!-- Q2 -->
+                        <div class="accordion-item border-0 border-bottom mb-2 rounded overflow-hidden shadow-sm">
+                            <h2 class="accordion-header" id="h2">
+                                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#c2">
+                                    هزینه مشاوره و بازدید حضوری چقدر است؟
+                                </button>
+                            </h2>
+                            <div id="c2" class="accordion-collapse collapse" data-bs-parent="#faqLeft">
+                                <div class="accordion-body text-muted small">مشاوره تلفنی و بازدید اولیه در اکثر مناطق تحت پوشش کاملاً **رایگان** است. هدف ما ارائه بهترین راهکار قبل از شروع هزینه برای شماست.</div>
+                            </div>
+                        </div>
+                        <!-- Q3 -->
+                        <div class="accordion-item border-0 border-bottom mb-2 rounded overflow-hidden shadow-sm">
+                            <h2 class="accordion-header" id="h3">
+                                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#c3">
+                                    آیا امکان انتقال تصویر دوربین روی موبایل وجود دارد؟
+                                </button>
+                            </h2>
+                            <div id="c3" class="accordion-collapse collapse" data-bs-parent="#faqLeft">
+                                <div class="accordion-body text-muted small">بله، با استفاده از IP Static یا سیستم P2P، تصاویر را روی گوشی (Android/iOS) کانفیگ می‌کنیم تا از هر جای دنیا نظارت داشته باشید.</div>
+                            </div>
+                        </div>
+                        <!-- Q4 -->
+                        <div class="accordion-item border-0 border-bottom mb-2 rounded overflow-hidden shadow-sm">
+                            <h2 class="accordion-header" id="h4">
+                                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#c4">
+                                    تفاوت هارد SSD با معمولی در لپ‌تاپ چیست؟
+                                </button>
+                            </h2>
+                            <div id="c4" class="accordion-collapse collapse" data-bs-parent="#faqLeft">
+                                <div class="accordion-body text-muted small">هاردهای SSD تا ۱۰ برابر سریع‌تر از هاردهای قدیمی هستند. با تعویض هارد قدیمی به SSD، سرعت بوت ویندوز و اجرای نرم‌افزارها به شدت افزایش می‌یابد.</div>
+                            </div>
+                        </div>
+                        <!-- Q5 -->
+                        <div class="accordion-item border-0 border-bottom mb-2 rounded overflow-hidden shadow-sm">
+                            <h2 class="accordion-header" id="h5">
+                                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#c5">
+                                    آیا ریکاوری اطلاعات پاک شده ممکن است؟
+                                </button>
+                            </h2>
+                            <div id="c5" class="accordion-collapse collapse" data-bs-parent="#faqLeft">
+                                <div class="accordion-body text-muted small">در ۸۰٪ موارد بله. اگر هارد ضربه فیزیکی شدید نخورده باشد و اطلاعات جدید روی آن کپی نکرده باشید، امکان بازیابی با نرم‌افزارهای تخصصی ما وجود دارد.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ستون دوم (سوالات ۶ تا ۱۰) -->
+                <div class="col-lg-6">
+                    <div class="accordion" id="faqRight">
+                        <!-- Q6 -->
+                        <div class="accordion-item border-0 border-bottom mb-2 rounded overflow-hidden shadow-sm">
+                            <h2 class="accordion-header" id="h6">
+                                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#c6">
+                                    پشتیبانی شبکه برای شرکت‌ها چگونه است؟
+                                </button>
+                            </h2>
+                            <div id="c6" class="accordion-collapse collapse" data-bs-parent="#faqRight">
+                                <div class="accordion-body text-muted small">ما قراردادهای پشتیبانی ماهانه و سالانه داریم که شامل بازدید دوره‌ای، رفع مشکلات پرینتر، شبکه و امنیت داده‌های سرور می‌شود.</div>
+                            </div>
+                        </div>
+                        <!-- Q7 -->
+                        <div class="accordion-item border-0 border-bottom mb-2 rounded overflow-hidden shadow-sm">
+                            <h2 class="accordion-header" id="h7">
+                                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#c7">
+                                    دوربین‌های مداربسته چند روز فیلم ضبط می‌کنند؟
+                                </button>
+                            </h2>
+                            <div id="c7" class="accordion-collapse collapse" data-bs-parent="#faqRight">
+                                <div class="accordion-body text-muted small">این بستگی به ظرفیت هارد دیسک و تعداد دوربین‌ها دارد. معمولاً پکیج‌های استاندارد ما بین ۱۵ تا ۳۰ روز قابلیت بازبینی تصاویر را فراهم می‌کنند.</div>
+                            </div>
+                        </div>
+                        <!-- Q8 -->
+                        <div class="accordion-item border-0 border-bottom mb-2 rounded overflow-hidden shadow-sm">
+                            <h2 class="accordion-header" id="h8">
+                                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#c8">
+                                    خدمات در کدام مناطق ارائه می‌شود؟
+                                </button>
+                            </h2>
+                            <div id="c8" class="accordion-collapse collapse" data-bs-parent="#faqRight">
+                                <div class="accordion-body text-muted small">تمرکز اصلی ما شهر کرج و حومه است، اما برای پروژه‌های بزرگ شبکه و دوربین مداربسته آماده اعزام تیم به شهرستان‌ها نیز هستیم.</div>
+                            </div>
+                        </div>
+                        <!-- Q9 -->
+                        <div class="accordion-item border-0 border-bottom mb-2 rounded overflow-hidden shadow-sm">
+                            <h2 class="accordion-header" id="h9">
+                                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#c9">
+                                    آیا نصب ویندوز و نرم‌افزار در محل انجام می‌شود؟
+                                </button>
+                            </h2>
+                            <div id="c9" class="accordion-collapse collapse" data-bs-parent="#faqRight">
+                                <div class="accordion-body text-muted small">بله، خدمات نرم‌افزاری، نصب ویندوز، آفیس، آنتی‌ویروس و درایورها در محل مشتری (منزل یا محل کار) قابل انجام است.</div>
+                            </div>
+                        </div>
+                        <!-- Q10 -->
+                        <div class="accordion-item border-0 border-bottom mb-2 rounded overflow-hidden shadow-sm">
+                            <h2 class="accordion-header" id="h10">
+                                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#c10">
+                                    هزینه اجرای شبکه پسیو (کابل‌کشی) چطور محاسبه می‌شود؟
+                                </button>
+                            </h2>
+                            <div id="c10" class="accordion-collapse collapse" data-bs-parent="#faqRight">
+                                <div class="accordion-body text-muted small">هزینه بر اساس متراژ کابل‌کشی، تعداد نودها (پریزهای شبکه) و نوع بستر (داکت، لوله یا ترانکینگ) پس از بازدید کارشناس برآورد دقیق می‌شود.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- بنر اقدام به عمل (Call to Action) -->
+    <section class="py-5 my-3">
+        <div class="container">
+            <div class="modern-card text-center py-5 shadow-lg" style="background: var(--primary-grad); color: white;">
+                <h2 class="fw-bold mb-3 text-white">نیاز به ارتقاء امنیت و زیرساخت مجموعه خود دارید؟</h2>
+                <p class="mb-4 fs-5 text-white-50">همین حالا با تک‌نت تماس بگیرید و مشاوره فنی کاملاً رایگان دریافت کنید.</p>
+                <div class="d-flex justify-content-center gap-3 flex-wrap">
+                    <a href="tel:09109694902" class="btn btn-light btn-lg rounded-pill fw-bold px-4 text-primary shadow-sm">
+                        <i class="bi bi-telephone-fill me-2"></i>تماس مستقیم: ۰۹۱۰۹۶۹۴۹۰۲
+                    </a>
+                    <a href="#services" class="btn btn-outline-light btn-lg rounded-pill fw-bold px-4">
+                        مروری بر خدمات
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </section>
+
+    <footer class="py-5 bg-dark text-white">
+        <div class="container text-center">
+            <h2 class="fw-bold text-primary mb-4">TECHNET</h2>
+            <div class="d-flex justify-content-center gap-4 mb-4">
+                <a href="index.html" class="text-white-50 text-decoration-none">خانه</a>
+                <a href="about.html" class="text-white-50 text-decoration-none">درباره ما</a>
+                <a href="contact.html" class="text-white-50 text-decoration-none">تماس با ما</a>
+            </div>
+            <hr class="w-50 mx-auto opacity-25">
+            <p class="small text-white-50 mt-4 mb-0">طراحی و اجرا توسط تیم تک‌نت | مدیریت: مهندس مهدوی</p>
+            <p class="x-small text-white-50 mt-2">© ۱۴۰۳ - تمامی حقوق محفوظ است</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

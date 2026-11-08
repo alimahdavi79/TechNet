@@ -1,0 +1,315 @@
+/* مسیر: wwwroot/assets/css/style.css */
+body { font-family: 'Vazirmatn', sans-serif; background-color: #f4f7fa; color: #2d3436; overflow-x: hidden; }
+
+:root {
+    --primary-grad: linear-gradient(135deg, #0d6efd 0%, #00d2ff 100%);
+    --dark-blue: #0a192f;
+    --glass-bg: rgba(255, 255, 255, 0.9);
+}
+
+/* نوبار یکپارچه */
+.navbar { background: var(--glass-bg) !important; backdrop-filter: blur(10px); border-bottom: 1px solid rgba(0,0,0,0.05); }
+
+/* هدرهای یکسان برای تمام صفحات */
+.page-header {
+    background: var(--dark-blue);
+    background-image: radial-gradient(circle at 20% 30%, rgba(13, 110, 253, 0.2) 0%, transparent 50%);
+    color: white;
+    padding: 140px 0 80px;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+}
+
+/* کارت‌های مدرن یکسان */
+.modern-card {
+    background: white;
+    border: none;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+.modern-card:hover { transform: translateY(-10px); box-shadow: 0 15px 35px rgba(13, 110, 253, 0.1); }
+
+/* دکمه‌های یکسان */
+.btn-main {
+    background: var(--primary-grad);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 12px 35px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.btn-main:hover { transform: scale(1.05); color: white; box-shadow: 0 8px 20px rgba(13, 110, 253, 0.3); }
+
+.icon-circle {
+    width: 65px; height: 65px;
+    background: rgba(13, 110, 253, 0.1);
+    color: #0d6efd;
+    border-radius: 18px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.8rem; margin-bottom: 20px;
+}
+/* CCTV Project Categories Section Styles */
+.category-project-card {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 4px solid transparent;
+}
+
+.category-project-card:hover {
+    border-bottom: 4px solid #0dcaf0; /* هماهنگ با رنگ فیروزه‌ای حلقه دوربین */
+}
+
+.category-project-card .icon-box {
+    width: 65px;
+    height: 65px;
+    background: rgba(13, 110, 253, 0.08);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+}
+
+.category-project-card:hover .icon-box {
+    transform: scale(1.1) rotate(-10deg);
+    background: linear-gradient(135deg, #0d6efd 0%, #00d2ff 100%);
+}
+
+.category-project-card:hover .icon-box i {
+    color: #ffffff !important;
+}
+
+.feature-list-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    color: #6c757d;
+    font-size: 0.95rem;
+}
+
+.feature-list-item i {
+    margin-left: 10px; /* برای راست‌چین (RTL) */
+    font-size: 1.1rem;
+    margin-top: 2px;
+}
+
+.btn-cta-outline {
+    background: transparent;
+    color: #0a192f;
+    border: 2px solid #e9ecef;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.btn-cta-outline:hover {
+    background: linear-gradient(135deg, #0d6efd 0%, #00d2ff 100%);
+    color: #ffffff !important;
+    border-color: transparent;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(13, 110, 253, 0.2);
+}
+/* Pre-Installation Section Styles */
+.tip-icon-wrapper {
+    width: 50px;
+    height: 50px;
+    background: rgba(13, 110, 253, 0.1);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+.modern-card:hover .tip-icon-wrapper {
+    background: #0d6efd;
+    transform: translateY(-5px);
+}
+
+.modern-card:hover .tip-icon-wrapper i {
+    color: #ffffff !important;
+}
+
+.border-right-warning {
+    border-right: 5px solid #ffc107;
+}
+
+.border-right-info {
+    border-right: 5px solid #0dcaf0;
+}
+
+.cta-gradient-banner {
+    background: linear-gradient(135deg, #0d6efd 0%, #00d2ff 100%);
+    border-radius: 25px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(13, 110, 253, 0.2);
+}
+
+.cta-gradient-banner::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 70%);
+    border-radius: 50%;
+}
+/* Installation Steps Styles */
+.installation-accordion .accordion-button {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #2c3e50;
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 15px !important;
+    transition: all 0.3s ease;
+}
+
+.installation-accordion .accordion-button:not(.collapsed) {
+    background-color: #e7f1ff;
+    color: #0d6efd;
+    box-shadow: none;
+}
+
+.installation-accordion .accordion-item {
+    border: none;
+    background: transparent;
+    margin-bottom: 1rem;
+}
+
+.installation-accordion .accordion-body {
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 2rem;
+    margin-top: 0.5rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+}
+
+.step-item {
+    position: relative;
+    padding-right: 2rem;
+    margin-bottom: 2rem;
+    border-right: 2px dashed #dee2e6;
+}
+
+.step-item:last-child {
+    border-right: none;
+    margin-bottom: 0;
+}
+
+.step-item::before {
+    content: '';
+    position: absolute;
+    right: -7px;
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    background-color: #0d6efd;
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px rgba(13, 110, 253, 0.2);
+}
+
+.location-badge {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #f1f5f9;
+    color: #475569;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    margin: 5px;
+    border: 1px solid #e2e8f0;
+}
+/* ====== استایل بخش "چرا ما؟" در صفحه درباره ما ====== */
+.why-us-box {
+    padding: 30px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+    transition: all 0.3s ease-in-out;
+    height: 100%;
+}
+
+.why-us-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.why-us-box .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    background: #e7f1ff;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.why-us-box .icon i {
+    color: #0d6efd;
+    font-size: 28px;
+}
+
+.why-us-box h4 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+/* ====== استایل بخش تیم ما ====== */
+.team-member {
+    text-align: center;
+    margin-bottom: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.team-member:hover {
+    transform: scale(1.05);
+}
+
+.team-member .pic {
+    overflow: hidden;
+}
+
+.team-member .pic img {
+    width: 100%;
+}
+
+.team-member .member-info {
+    padding: 25px 15px;
+}
+
+.team-member h4 {
+    font-weight: 700;
+    margin-bottom: 5px;
+    font-size: 18px;
+    color: #333;
+}
+
+.team-member span {
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+    color: #999;
+    margin-bottom: 10px;
+}
+
+.team-member .social a {
+    color: #999;
+    margin: 0 5px;
+    transition: color 0.3s;
+}
+
+.team-member .social a:hover {
+    color: #0d6efd;
+}
+++

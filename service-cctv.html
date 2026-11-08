@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نصب دوربین مداربسته | TECHNET</title>
+
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <style>
+        /* انیمیشن چرخش دور لنز */
+        .cctv-lens {
+            position: relative;
+            display: inline-block;
+            z-index: 1;
+        }
+
+        .cctv-lens::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 140px;
+            height: 140px;
+            border: 2px dashed #0dcaf0;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            animation: rotate 15s linear infinite;
+            z-index: -1;
+        }
+
+        @keyframes rotate {
+            from {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+
+            to {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
+
+        .feature-card-cctv {
+            border-bottom: 4px solid #0d6efd;
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+
+        .feature-card-cctv:hover {
+            background: #fff;
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1) !important;
+        }
+
+        /* استایل گوشی موبایل */
+        .mobile-preview {
+            background: #111;
+            border: 12px solid #222;
+            border-radius: 40px;
+            padding: 0;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+            aspect-ratio: 9/19;
+        }
+
+        .mobile-preview img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.8;
+        }
+
+        .overlay-text {
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(5px);
+            padding: 10px;
+            border-radius: 10px;
+        }
+        /* =========================================
+   استایل های خلاصه 7 گام نصب
+========================================= */
+        .summary-step-card {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+            border-right: 4px solid #0d6efd;
+            height: 100%;
+            transition: all 0.3s ease;
+        }
+
+        .summary-step-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(13, 110, 253, 0.15);
+        }
+
+        .summary-step-icon {
+            width: 40px;
+            height: 40px;
+            background: #e9f2ff;
+            color: #0d6efd;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+
+        /* =========================================
+   استایل های سوالات متداول (FAQ)
+========================================= */
+        .faq-section {
+            background-color: #f8f9fa;
+            border-radius: 20px;
+            padding: 40px 20px;
+        }
+
+        .faq-accordion .accordion-item {
+            border: 1px solid #eef2f5;
+            margin-bottom: 15px;
+            border-radius: 12px !important;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+            overflow: hidden;
+        }
+
+        .faq-accordion .accordion-button {
+            font-weight: 600;
+            font-size: 1.05rem;
+            background-color: #ffffff;
+            color: #2b3445;
+            box-shadow: none !important;
+            padding: 1.2rem 1.5rem;
+        }
+
+        .faq-accordion .accordion-button:not(.collapsed) {
+            color: #0d6efd;
+            background-color: #f0f6ff;
+        }
+
+        .faq-accordion .accordion-body {
+            background-color: #ffffff;
+            color: #6c757d;
+            line-height: 1.8;
+            padding: 1.5rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top navbar-light">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary fs-3" href="index.html">TECHNET</a>
+            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
+                data-bs-content="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">خانه</a></li>
+                     <li class="nav-item"><a class="nav-link active fw-bold" href="service-cctv.html">دوربین مداربسته</a>   </li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">درباره ما</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">تماس با ما</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header text-center">
+        <div class="container">
+            <div class="cctv-lens mb-4">
+                <i class="bi bi-camera-video-fill display-1 text-info"></i>
+            </div>
+            <h1 class="display-4 fw-bold mb-3">امنیت هوشمند با <span class="text-info">TECHNET</span></h1>
+            <p class="lead opacity-75">نصب تخصصی سیستم‌های نظارتی IP و پروژه های تحت شبکه با ضمانت کتبی</p>
+        </div>
+    </header>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-4 text-center">
+                <div class="col-md-3">
+                    <div class="modern-card feature-card-cctv p-4">
+                        <i class="bi bi-moon-stars-fill fs-1 text-primary mb-3 d-block"></i>
+                        <h6 class="fw-bold">دید در شب رنگی</h6>
+                        <p class="small text-muted mb-0">تصویر کاملاً رنگی و شفاف حتی در تاریکی مطلق محیط.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="modern-card feature-card-cctv p-4">
+                        <i class="bi bi-phone-vibrate-fill fs-1 text-primary mb-3 d-block"></i>
+                        <h6 class="fw-bold">انتقال تصویر هوشمند</h6>
+                        <p class="small text-muted mb-0">کنترل کامل محیط روی موبایل (iOS/Android) از راه دور.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="modern-card feature-card-cctv p-4">
+                        <i class="bi bi-person-bounding-box fs-1 text-primary mb-3 d-block"></i>
+                        <h6 class="fw-bold">تشخیص چهره و حرکت</h6>
+                        <p class="small text-muted mb-0">الگوریتم‌های هوشمند برای کاهش آلارم‌های خطا و امنیت بالا.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="modern-card feature-card-cctv p-4">
+                        <i class="bi bi-shield-lock-fill fs-1 text-primary mb-3 d-block"></i>
+                        <h6 class="fw-bold">پایداری و امنیت داده</h6>
+                        <p class="small text-muted mb-0">رمزنگاری تصاویر و استفاده از هاردهای تخصصی بنفش.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <h2 class="fw-bold mb-4">نظارت کامل، در <span class="text-primary">دستان شما</span></h2>
+                    <p class="text-muted lh-lg mb-4">
+                        تیم فنی TECHNET با سابقه اجرای پروژه‌های صنعتی و مسکونی، بهترین برندها (Hikvision, Dahua) را
+                        متناسب با بودجه شما پیشنهاد می‌دهد. ما فقط فروشنده نیستیم، ما مشاور امنیتی شما هستیم.
+                    </p>
+                    <div class="row g-3 mb-4">
+                        <div class="col-6"><i class="bi bi-check2-circle text-primary me-2"></i> گارانتی ۲۴ ماهه تعویض
+                        </div>
+                        <div class="col-6"><i class="bi bi-check2-circle text-primary me-2"></i> بازدید و کارشناسی
+                            رایگان</div>
+                        <div class="col-6"><i class="bi bi-check2-circle text-primary me-2"></i> کابل‌کشی استاندارد
+                        </div>
+                        <div class="col-6"><i class="bi bi-check2-circle text-primary me-2"></i> انتقال تصویر رایگان
+                        </div>
+                    </div>
+                    <a href="contact.html" class="btn btn-main btn-lg px-5 shadow">استعلام قیمت و مشاوره</a>
+                </div>
+                <div class="col-lg-6">
+                    <div class="mobile-preview mx-auto" style="max-width: 280px;">
+                        <img src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?q=80&w=500"
+                            alt="نظارت تصویری">
+                        <div class="position-absolute top-50 start-50 translate-middle text-white text-center w-75">
+                            <div class="overlay-text">
+                                <i class="bi bi-play-circle-fill display-4 mb-2 d-block"></i>
+                                <span class="small fw-bold">Live: Parking Entrance</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- بخش راهکارهای تخصصی (دسته‌بندی پروژه‌ها) -->
+    <section class="py-5 mt-4" style="background-color: #f4f7fa;">
+        <div class="container">
+            <!-- عنوان بخش -->
+            <div class="text-center mb-5">
+                <h2 class="fw-bold text-dark mb-3">راهکارهای تخصصی دوربین مداربسته</h2>
+                <p class="text-muted fs-5">طراحی و اجرای سیستم‌های نظارتی دقیقاً متناسب با نیاز و کاربری محیط شما</p>
+            </div>
+
+            <div class="row g-4">
+                <!-- دسته ۱: پروژه‌های مسکونی -->
+                <div class="col-md-6 col-lg-6">
+                    <div class="modern-card category-project-card h-100 p-4">
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="icon-box ms-3">
+                                <i class="bi bi-house-door fs-2 text-primary transition-base"></i>
+                            </div>
+                            <h3 class="h4 fw-bold mb-0">مسکونی و مجتمع‌ها</h3>
+                        </div>
+                        <p class="text-muted mb-4 line-height-lg">
+                            تامین امنیت پایدار برای ساختمان‌های مسکونی و برج‌ها با تمرکز بر پوشش کامل فضاهای مشاع،
+                            مدیریت ایمن ترددها و ایجاد آرامش خاطر کامل برای ساکنین.
+                        </p>
+                        <div class="mb-4 flex-grow-1">
+                            <div class="feature-list-item">
+                                <i class="bi bi-check-circle-fill text-info"></i>
+                                <span>نصب دوربین‌های <strong>پلاک‌خوان هوشمند</strong> جهت کنترل درب پارکینگ</span>
+                            </div>
+                            <div class="feature-list-item">
+                                <i class="bi bi-check-circle-fill text-info"></i>
+                                <span>پوشش کامل نقاط کور لابی، راهروها، داخل آسانسور و محوطه باز</span>
+                            </div>
+                            <div class="feature-list-item">
+                                <i class="bi bi-check-circle-fill text-info"></i>
+                                <span>انتقال تصویر امن روی موبایل مدیریت و ساکنین (با سطح دسترسی مجزا)</span>
+                            </div>
+                        </div>
+                        <div class="mt-auto pt-3 border-top">
+                            <a href="tel:09109694902"
+                                class="btn btn-cta-outline w-100 d-flex justify-content-between align-items-center px-4 py-3">
+                                <span class="fw-bold">دریافت مشاوره رایگان</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- دسته ۲: پروژه‌های اداری -->
+                <div class="col-md-6 col-lg-6">
+                    <div class="modern-card category-project-card h-100 p-4">
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="icon-box ms-3">
+                                <i class="bi bi-buildings fs-2 text-primary transition-base"></i>
+                            </div>
+                            <h3 class="h4 fw-bold mb-0">شرکت‌ها و محیط‌های اداری</h3>
+                        </div>
+                        <p class="text-muted mb-4 line-height-lg">
+                            پیاده‌سازی شبکه‌های نظارتی یکپارچه برای سازمان‌ها، جهت نظارت دقیق بر فرآیندهای کاری، حفظ
+                            امنیت اسناد و مدیریت بهینه پرسنل.
+                        </p>
+                        <div class="mb-4 flex-grow-1">
+                            <div class="feature-list-item">
+                                <i class="bi bi-check-circle-fill text-info"></i>
+                                <span>اتصال یکپارچه دوربین‌ها به <strong>شبکه مرکزی (Network)</strong> سازمان</span>
+                            </div>
+                            <div class="feature-list-item">
+                                <i class="bi bi-check-circle-fill text-info"></i>
+                                <span>استفاده از دوربین‌های سقفی (Dome) دکوراتیو مجهز به میکروفون داخلی</span>
+                            </div>
+                            <div class="feature-list-item">
+                                <i class="bi bi-check-circle-fill text-info"></i>
+                                <span>نظارت نامحسوس و کنترل تردد ارباب رجوع در بخش‌های حساس</span>
+                            </div>
+                        </div>
+                        <div class="mt-auto pt-3 border-top">
+                            <a href="tel:09109694902"
+                                class="btn btn-cta-outline w-100 d-flex justify-content-between align-items-center px-4 py-3">
+                                <span class="fw-bold">دریافت مشاوره رایگان</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- دسته ۳: پروژه‌های تجاری و فروشگاهی -->
+                <div class="col-md-6 col-lg-6">
+                    <div class="modern-card category-project-card h-100 p-4">
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="icon-box ms-3">
+                                <i class="bi bi-shop fs-2 text-primary transition-base"></i>
+                            </div>
+                            <h3 class="h4 fw-bold mb-0">تجاری و فروشگاهی</h3>
+                        </div>
+                        <p class="text-muted mb-4 line-height-lg">
+                            حفاظت از دارایی‌ها و نظارت بر تراکنش‌های مالی در مغازه‌ها، فروشگاه‌های زنجیره‌ای و مراکز
+                            خرید با استفاده از سیستم‌های هوشمند بازدارنده.
+                        </p>
+                        <div class="mb-4 flex-grow-1">
+                            <div class="feature-list-item">
+                                <i class="bi bi-check-circle-fill text-info"></i>
+                                <span>نظارت میکرو و باکیفیت بر میز صندوق، کانتر و <strong>تراکنش‌های
+                                        مالی</strong></span>
+                            </div>
+                            <div class="feature-list-item">
+                                <i class="bi bi-check-circle-fill text-info"></i>
+                                <span>استفاده از دوربین‌های چشم‌ماهی (Fisheye) برای دید ۳۶۰ درجه سالن</span>
+                            </div>
+                            <div class="feature-list-item">
+                                <i class="bi bi-check-circle-fill text-info"></i>
+                                <span>قابلیت تشخیص چهره و شمارش افراد جهت تحلیل رفتار مشتریان</span>
+                            </div>
+                        </div>
+                        <div class="mt-auto pt-3 border-top">
+                            <a href="tel:09109694902"
+                                class="btn btn-cta-outline w-100 d-flex justify-content-between align-items-center px-4 py-3">
+                                <span class="fw-bold">دریافت مشاوره رایگان</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- دسته ۴: پروژه‌های صنعتی و کارخانجات -->
+                <div class="col-md-6 col-lg-6">
+                    <div class="modern-card category-project-card h-100 p-4">
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="icon-box ms-3">
+                                <i class="bi bi-gear-wide-connected fs-2 text-primary transition-base"></i>
+                            </div>
+                            <h3 class="h4 fw-bold mb-0">صنعتی و کارخانجات</h3>
+                        </div>
+                        <p class="text-muted mb-4 line-height-lg">
+                            راهکارهای قدرتمند و مقاوم در برابر شرایط سخت محیطی برای نظارت بر خطوط تولید، سوله‌ها،
+                            انبارها و محوطه‌های وسیع کارخانجات.
+                        </p>
+                        <div class="mb-4 flex-grow-1">
+                            <div class="feature-list-item">
+                                <i class="bi bi-check-circle-fill text-info"></i>
+                                <span>تجهیزات صنعتی ضدآب و گردوغبار با استاندارد <strong>IP67</strong> و بدنه
+                                    فلزی</span>
+                            </div>
+                            <div class="feature-list-item">
+                                <i class="bi bi-check-circle-fill text-info"></i>
+                                <span>دوربین‌های چرخشی (PTZ) زوم‌دار و دید در شب‌های بُرد بلند (Starlight)</span>
+                            </div>
+                            <div class="feature-list-item">
+                                <i class="bi bi-check-circle-fill text-info"></i>
+                                <span>زیرساخت قدرتمند با کابل‌کشی فیبر نوری و انتقال تصویر پایدار بی‌سیم</span>
+                            </div>
+                        </div>
+                        <div class="mt-auto pt-3 border-top">
+                            <a href="tel:09109694902"
+                                class="btn btn-cta-outline w-100 d-flex justify-content-between align-items-center px-4 py-3">
+                                <span class="fw-bold">دریافت مشاوره رایگان</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- بخش نکات کلیدی قبل از نصب -->
+    <section class="py-5">
+        <div class="container">
+            <!-- عنوان بخش -->
+            <div class="text-center mb-5">
+                <h2 class="fw-bold text-dark mb-3">نکات کلیدی پیش از نصب دوربین مداربسته</h2>
+                <p class="text-muted fs-5">اطلاعات ضروری و استانداردهایی که برای داشتن یک سیستم نظارتی پایدار باید
+                    بدانید</p>
+            </div>
+
+            <!-- 4 نکته اصلی شبکه ای -->
+            <div class="row g-4 mb-5">
+                <!-- نکته 1 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="modern-card p-4 h-100">
+                        <div class="tip-icon-wrapper">
+                            <i class="bi bi-lightning-charge fs-3 text-primary transition-base"></i>
+                        </div>
+                        <h4 class="h5 fw-bold mb-3">عدم نصب روی اجسام رسانا</h4>
+                        <p class="text-muted small mb-0 line-height-lg">
+                            هیچ‌گاه دوربین را روی اجسام رسانا (مثل فلزات) نصب نکنید. عبور جریان‌های مغناطیسی باعث ایجاد
+                            نویز شدید در تصویر شده و طول عمر مفید دوربین را به شدت کاهش می‌دهد.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- نکته 2 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="modern-card p-4 h-100">
+                        <div class="tip-icon-wrapper">
+                            <i class="bi bi-aspect-ratio fs-3 text-primary transition-base"></i>
+                        </div>
+                        <h4 class="h5 fw-bold mb-3">انتخاب زاویه طلایی</h4>
+                        <p class="text-muted small mb-0 line-height-lg">
+                            مناسب‌ترین محل، کنج اتاق‌ها و محوطه‌هاست. دوربین باید به گونه‌ای نصب شود که تصویر تمام
+                            ورودی‌ها و خروجی‌ها را پوشش داده و ضمناً به پریز برق یا داکت شبکه نزدیک باشد.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- نکته 3 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="modern-card p-4 h-100">
+                        <div class="tip-icon-wrapper">
+                            <i class="bi bi-rulers fs-3 text-primary transition-base"></i>
+                        </div>
+                        <h4 class="h5 fw-bold mb-3">ارتفاع نصب استاندارد</h4>
+                        <p class="text-muted small mb-0 line-height-lg">
+                            اگر قصد نصب دوربین در محیط بیرون (Outdoor) را دارید، حتماً آن را در ارتفاع بالای ۳ متر نصب
+                            کنید تا از دسترس عموم افراد و سارقین احتمالی کاملاً دور باشد.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- نکته 4 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="modern-card p-4 h-100">
+                        <div class="tip-icon-wrapper">
+                            <i class="bi bi-tools fs-3 text-primary transition-base"></i>
+                        </div>
+                        <h4 class="h5 fw-bold mb-3">بررسی مسیر تاسیسات</h4>
+                        <p class="text-muted small mb-0 line-height-lg">
+                            قبل از دریل‌کاری، حتماً مسیر عبور کابل‌های برق توکار و لوله‌های تاسیسات را بررسی کنید. در
+                            صورت عدم امکان سوراخ‌کاری، باید به دنبال یک جایگزین استاندارد بگردید.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- باکس های توجه و پرسش متداول -->
+            <div class="row g-4 mb-5">
+                <div class="col-lg-6">
+                    <div class="modern-card p-4 h-100 border-right-warning bg-white">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="bi bi-exclamation-triangle-fill text-warning fs-3 ms-2"></i>
+                            <h4 class="h5 fw-bold mb-0">توجه: اهمیت انتخاب محل مناسب</h4>
+                        </div>
+                        <p class="text-muted mb-0 line-height-lg text-justify">
+                            نصب دوربین می‌تواند صرفاً یافتن محل مناسب، اتصال به برق و همگام‌سازی با موبایل باشد؛ اما
+                            <strong>مهم‌ترین موضوع</strong> انتخاب زاویه دید فاقد نقطه کور است. مخصوصاً برای دوربین‌های
+                            چرخشی (PTZ)، باید مطمئن شوید در مسیر چرخش لنز، هیچ مانع فیزیکی وجود نداشته باشد که دید را
+                            کور کند.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="modern-card p-4 h-100 border-right-info bg-white">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="bi bi-person-gear text-info fs-3 ms-2"></i>
+                            <h4 class="h5 fw-bold mb-0">خودم نصب کنم یا نصاب حرفه‌ای؟</h4>
+                        </div>
+                        <p class="text-muted mb-0 line-height-lg text-justify">
+                            این موضوع کاملاً به مهارت کابل‌کشی و شناخت شما از تجهیزات بستگی دارد. چنانچه مهارت کافی
+                            ندارید، اکیداً توصیه می‌کنیم برای جلوگیری از ایجاد نقاط کور در محیط و بهره‌مندی از حداکثر
+                            کیفیت تصویر، کار را به یک نصاب و متخصص حرفه‌ای بسپارید.
+                        </p>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- بخش آموزش نصب دوربین مداربسته -->
+    <section class="py-5 bg-light" id="installation-guide">
+        <div class="container">
+            <!-- عنوان و مقدمه -->
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-10 text-center">
+                    <h2 class="fw-bold text-dark mb-4">آموزش و مراحل جامع نصب دوربین مداربسته</h2>
+                    <p class="text-muted line-height-lg text-justify" style="text-align-last: center;">
+                        این بخش برای آشنایی شما از مراحل و نحوه نصب دوربین تنظیم شده است. اولین کار، ارائه درخواست نصب
+                        به طور شفاهی یا کتبی است؛ اما پیشنهاد می‌کنیم قبل از آن به <strong>تحقیق در مورد شرکت‌های
+                            معتبر</strong> بپردازید. این مکث کوتاه ارزشش را دارد، زیرا نصب دوربین یک پروژه نظارتی-حفاظتی
+                        حیاتی است و اطلاعات بیشتر کمک می‌کند تا بهترین شرکت را انتخاب کنید و از کیفیت راه‌اندازی سیستم
+                        خود آسوده‌خاطر باشید.
+                    </p>
+                </div>
+            </div>
+
+            <!-- باکس اماکن نصب (طراحی ویژه) -->
+            <div class="modern-card bg-white p-4 p-md-5 mb-5 shadow-sm rounded-4 border-top border-primary border-4">
+                <h4 class="fw-bold mb-4 text-center"><i class="bi bi-geo-alt-fill text-primary ms-2"></i>نقاط استراتژیک
+                    نصب در اماکن مختلف</h4>
+                <div class="row g-4">
+                    <div class="col-md-3 text-center border-end-md">
+                        <i class="bi bi-house-door text-muted fs-1 mb-2 d-block"></i>
+                        <h5 class="fw-bold mb-3">خانه و منازل</h5>
+                        <div>
+                            <span class="location-badge">روبروی درب خروجی</span>
+                            <span class="location-badge">پنجره‌ها</span>
+                            <span class="location-badge">پارکینگ و انباری</span>
+                            <span class="location-badge">پذیرایی و بالکن</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3 text-center border-end-md">
+                        <i class="bi bi-shop text-muted fs-1 mb-2 d-block"></i>
+                        <h5 class="fw-bold mb-3">فروشگاه و مغازه</h5>
+                        <div>
+                            <span class="location-badge">پشت صندوق</span>
+                            <span class="location-badge">رو به قفسه‌ها</span>
+                            <span class="location-badge">درب ورودی اصلی</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3 text-center border-end-md">
+                        <i class="bi bi-building text-muted fs-1 mb-2 d-block"></i>
+                        <h5 class="fw-bold mb-3">شرکت و اداره‌ها</h5>
+                        <div>
+                            <span class="location-badge">روبروی آسانسور</span>
+                            <span class="location-badge">سالن انتظار</span>
+                            <span class="location-badge">اتاق کارکنان</span>
+                            <span class="location-badge">راهروهای خروجی</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3 text-center">
+                        <i class="bi bi-gear-wide-connected text-muted fs-1 mb-2 d-block"></i>
+                        <h5 class="fw-bold mb-3">واحدهای صنعتی</h5>
+                        <div>
+                            <span class="location-badge">سالن‌های تولید</span>
+                            <span class="location-badge">انبار محصولات</span>
+                            <span class="location-badge">محوطه و حیاط</span>
+                            <span class="location-badge">درب‌های ترانزیت</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- آکاردئون مراحل اجرایی نصب -->
+            <div class="accordion installation-accordion mb-5" id="accordionInstallation">
+
+                <!-- فاز اول -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
+                            aria-controls="collapseOne">
+                            فاز اول: مشاوره، بازدید و طراحی سیستم (مراحل ۱ تا ۵)
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                        data-bs-parent="#accordionInstallation">
+                        <div class="accordion-body">
+                            <div class="step-item">
+                                <h5 class="fw-bold text-primary">۱. بازدید از محل نصب</h5>
+                                <p class="text-muted small text-justify">بعد از درخواست نصب، شرکت با مشتری هماهنگ کرده و
+                                    زمانی را برای بازدید تخصصی کارشناسان از محل تعیین می‌کند.</p>
+                            </div>
+                            <div class="step-item">
+                                <h5 class="fw-bold text-primary">۲. جانمایی دوربین‌ها</h5>
+                                <p class="text-muted small text-justify mb-2">حساس‌ترین مرحله نصب است. دوربین باید در
+                                    ارتفاع و محلی قرار گیرد که بیشترین زاویه دید و کمترین نقطه کور را داشته باشد و از
+                                    دسترس سارقین دور بماند.</p>
+                                <p
+                                    class="text-muted small text-justify bg-light p-2 rounded border-end border-warning border-3">
+                                    <strong>نکته محیط بیرونی:</strong> مراقب رشد گیاهان و لانه سازی پرندگان روی دوربین
+                                    باشید. آشیانه پرندگان علاوه بر آلودگی، دید لنز را کور کرده و در دراز مدت آسیب‌رسان
+                                    است.</p>
+                            </div>
+                            <div class="step-item">
+                                <h5 class="fw-bold text-primary">۳ و ۴. نقشه‌کشی و تعیین محل دستگاه رک</h5>
+                                <p class="text-muted small text-justify">طرح و نقشه نصب براساس اهداف کارفرما ترسیم
+                                    می‌شود. همچنین محل نصب دستگاه ضبط (DVR/NVR) بسیار مهم بوده و با مشاوره کارشناس تعیین
+                                    می‌گردد.</p>
+                            </div>
+                            <div class="step-item">
+                                <h5 class="fw-bold text-primary">۵. تعیین نوع سیستم نظارتی</h5>
+                                <p class="text-muted small text-justify">با توجه به مکان و کاربری، تکنولوژی سیستم (تحت
+                                    شبکه یا آنالوگ) که در امکانات نهایی و چگونگی نصب موثر است، مشخص می‌شود.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- فاز دوم -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            فاز دوم: برآورد تجهیزات و زیرساخت (مراحل ۶ تا ۹)
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                        data-bs-parent="#accordionInstallation">
+                        <div class="accordion-body">
+                            <div class="step-item">
+                                <h5 class="fw-bold text-primary">۶. مشخص کردن تعداد دوربین‌های داخلی و خارجی</h5>
+                                <p class="text-muted small text-justify mb-2">دوربین داخل اتاق (Indoor) با دوربین فضای
+                                    بیرون (Outdoor) کاملاً متفاوت است. استفاده اشتباه موجب خرابی سریع بر اثر رطوبت یا
+                                    شرایط جوی می‌شود.</p>
+                                <p class="text-muted small text-justify bg-light p-2 rounded"><strong>انتخاب
+                                        لنز:</strong> لنزهای ثابت زاویه دید بدون تغییر دارند، اما لنزهای متغیر
+                                    (وریفوکال) امکان زوم و تغییر زاویه را پس از نصب فراهم می‌کنند.</p>
+                            </div>
+                            <div class="step-item">
+                                <h5 class="fw-bold text-primary">۷. مسیر کابل کشی</h5>
+                                <p class="text-muted small text-justify">بهترین مسیر با توجه به حفظ کیفیت ارتباط، زیبایی
+                                    محیط و امنیت تجهیزات توسط کارشناس مشخص می‌شود.</p>
+                            </div>
+                            <div class="step-item">
+                                <h5 class="fw-bold text-primary">۸ و ۹. برآورد تجهیزات و تنظیم پیش‌فاکتور</h5>
+                                <p class="text-muted small text-justify">با مشخص شدن مسیر، متراژ کابل و تعداد دوربین‌ها،
+                                    لیست نهایی اقلام تهیه شده و پیش‌فاکتور برای اطلاع مشتری از هزینه‌ها صادر می‌شود.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- فاز سوم -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            فاز سوم: عملیات نصب فیزیکی و کابل‌کشی (مراحل ۱۰ تا ۱۴)
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                        data-bs-parent="#accordionInstallation">
+                        <div class="accordion-body">
+                            <div class="step-item">
+                                <h5 class="fw-bold text-primary">۱۰ و ۱۱. آماده‌سازی، دریل‌کاری و نصب پایه‌ها</h5>
+                                <p class="text-muted small text-justify">پس از تایید پیش‌فاکتور، تیم نصب شروع به کار
+                                    کرده و مراحل سوراخ‌کاری، نصب براکت‌ها و برش و سوکت‌زدن کابل‌ها آغاز می‌شود.</p>
+                            </div>
+                            <div class="step-item">
+                                <h5 class="fw-bold text-primary">۱۲ و ۱۳. نصب هارد و دوربین‌ها</h5>
+                                <p class="text-muted small text-justify">هارد ذخیره‌سازی درون دستگاه ضبط نصب می‌شود. سپس
+                                    نصب فیزیکی بدنه دوربین‌ها در نقاط تعیین شده انجام می‌گیرد (این مرحله زمان‌برترین بخش
+                                    است).</p>
+                            </div>
+                            <div class="step-item">
+                                <h5 class="fw-bold text-primary">۱۴. کابل‌کشی تصویر و اتصال به برق (آداپتور)</h5>
+                                <p class="text-muted small text-justify mb-2">کابل کواکسیال (RG59) با فیش BNC برای
+                                    آنالوگ و کابل‌های Cat6/Cat5 با سوکت شبکه برای سیستم‌های IP استفاده می‌شود.</p>
+                                <div class="bg-light p-3 rounded mt-2">
+                                    <p class="small text-muted mb-1"><i
+                                            class="bi bi-check-circle-fill text-success ms-1"></i><strong>تامین
+                                            برق:</strong> سیستم‌ها نیازمند آداپتور یا منبع تغذیه مرکزی برای جلوگیری از
+                                        نوسانات برق هستند.</p>
+                                    <p class="small text-muted mb-0"><i
+                                            class="bi bi-check-circle-fill text-success ms-1"></i><strong>فناوری‌های
+                                            جدید:</strong> دوربین‌های PoC (در آنالوگ) و PoE (در شبکه) امکان تامین برق از
+                                        طریق همان کابل تصویر را فراهم کرده و کابل‌کشی را به شدت ساده می‌کنند.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- فاز چهارم -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            فاز چهارم: تنظیمات نرم‌افزاری و تحویل سیستم (مراحل ۱۵ تا ۱۷)
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                        data-bs-parent="#accordionInstallation">
+                        <div class="accordion-body">
+                            <div class="step-item">
+                                <h5 class="fw-bold text-primary">۱۵. اتصال مانیتور و لوازم جانبی</h5>
+                                <p class="text-muted small text-justify">در صورت درخواست کارفرما، مانیتور، میکروفن یا
+                                    ماوس به دستگاه متصل می‌شود (برخی افراد فقط نیازمند انتقال تصویر روی موبایل هستند).
+                                </p>
+                            </div>
+                            <div class="step-item">
+                                <h5 class="fw-bold text-primary">۱۶. تنظیمات دقیق دوربین و دستگاه ضبط</h5>
+                                <p class="text-muted small text-justify mb-2"><strong>بخش فیزیکی:</strong> تنظیم زاویه
+                                    دقیق لنز و رفع تاثیرات نور محیط. <br><strong>بخش نرم‌افزاری:</strong> زمان‌بندی ضبط،
+                                    تنظیمات وضوح تصویر، و فعال‌سازی قابلیت‌های هوشمند (مانند عبور از خط لاین‌کراسینگ،
+                                    تشخیص حرکت و شمارش افراد).</p>
+                            </div>
+                            <div class="step-item">
+                                <h5 class="fw-bold text-primary">۱۷. تست و راه‌اندازی نهایی</h5>
+                                <p class="text-muted small text-justify">آخرین مرحله تست سیستم است. عملکردها به کارفرما
+                                    نمایش داده شده و در صورت تایید کارکرد صحیح، پروژه تحویل داده می‌شود.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- ==========================================
+             بخش خلاصه 7 گام مهم نصب
+        =========================================== -->
+            <div class="mt-5 mb-5 pt-4 border-top">
+                <h3 class="fw-bold text-center text-dark mb-3">۷ گام مهم در نصب دوربین مداربسته</h3>
+                <p class="text-center text-muted mb-5">به طور خلاصه مطالب شرح داده شده در فوق را به صورت نکات مهم و
+                    کوتاه در ذیل اشاره می‌کنیم:</p>
+
+                <div class="row g-4 justify-content-center">
+                    <!-- گام 1 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="summary-step-card">
+                            <div class="summary-step-icon">۱</div>
+                            <h6 class="fw-bold text-dark">تصمیم‌گیری در مورد نحوه نظارت</h6>
+                            <p class="text-muted small mb-0 text-justify">تصمیم دارید سیستم خود را با استفاده از اینترنت
+                                نظارت کنید یا خیر.</p>
+                        </div>
+                    </div>
+                    <!-- گام 2 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="summary-step-card">
+                            <div class="summary-step-icon">۲</div>
+                            <h6 class="fw-bold text-dark">تعیین تعداد دوربین‌های مورد نیاز</h6>
+                            <p class="text-muted small mb-0 text-justify">برای رسیدن به تعداد صحیح و پوشش کامل، از
+                                مشاوران و متخصصین کمک بگیرید.</p>
+                        </div>
+                    </div>
+                    <!-- گام 3 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="summary-step-card">
+                            <div class="summary-step-icon">۳</div>
+                            <h6 class="fw-bold text-dark">موقعیت‌یابی دوربین‌ها</h6>
+                            <p class="text-muted small mb-0 text-justify">پنهان یا مخفی بودن دوربین و همچنین حفظ امنیت
+                                فیزیکی خود دوربین در برابر آسیب.</p>
+                        </div>
+                    </div>
+                    <!-- گام 4 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="summary-step-card">
+                            <div class="summary-step-icon">۴</div>
+                            <h6 class="fw-bold text-dark">محل قرارگیری دستگاه DVR / NVR</h6>
+                            <p class="text-muted small mb-0 text-justify">ایمن‌سازی دستگاه ضبط ویدئو دیجیتال (DVR) یا
+                                تحت شبکه (NVR) بسیار مهم است.</p>
+                        </div>
+                    </div>
+                    <!-- گام 5 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="summary-step-card">
+                            <div class="summary-step-icon">۵</div>
+                            <h6 class="fw-bold text-dark">برق اضطراری و منبع تغذیه</h6>
+                            <p class="text-muted small mb-0 text-justify">تصمیم‌گیری در ارتباط با برق اضطراری و تهیه
+                                منبع تغذیه پشتیبان (UPS) برای قطعی‌ها.</p>
+                        </div>
+                    </div>
+                    <!-- گام 6 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="summary-step-card">
+                            <div class="summary-step-icon">۶</div>
+                            <h6 class="fw-bold text-dark">آزمایش سیستم دوربین</h6>
+                            <p class="text-muted small mb-0 text-justify">پس از اتمام تمامی مراحل نصب فیزیکی و
+                                نرم‌افزاری، اجرای آزمایشی بسیار مهم است.</p>
+                        </div>
+                    </div>
+                    <!-- گام 7 (وسط چین شده در ردیف آخر) -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="summary-step-card">
+                            <div class="summary-step-icon">۷</div>
+                            <h6 class="fw-bold text-dark">نگهداری و حفظ دوربین‌ها</h6>
+                            <p class="text-muted small mb-0 text-justify">بهترین روش‌ها شامل تمیز کردن ماهانه لنزها برای
+                                رفع آلودگی و تعویض به موقع کابل‌های فرسوده است.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ==========================================
+             بخش سوالات متداول (FAQ)
+        =========================================== -->
+            <div class="faq-section mt-5 mb-5 shadow-sm">
+                <div class="text-center mb-5">
+                    <h3 class="fw-bold text-dark mb-2"><i class="bi bi-question-circle text-primary ms-2"></i>سوالات
+                        متداول دوربین مداربسته</h3>
+                    <p class="text-muted">پاسخ به پرتکرارترین سوالات شما در زمینه خرید و نصب</p>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <div class="accordion faq-accordion" id="accordionFAQ">
+
+                            <!-- سوال 1 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="faqHeading1">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#faqCollapse1" aria-expanded="false"
+                                        aria-controls="faqCollapse1">
+                                        ۱- انواع دوربین مداربسته چیست و کدام بهتر است؟
+                                    </button>
+                                </h2>
+                                <div id="faqCollapse1" class="accordion-collapse collapse" aria-labelledby="faqHeading1"
+                                    data-bs-parent="#accordionFAQ">
+                                    <div class="accordion-body text-justify">
+                                        <p>دوربین‌های مداربسته از نظر ظاهری به دوربین‌های دام، بولت، اسپیددام، فیش آی و
+                                            پین هول دسته‌بندی می‌شوند. استفاده از هر کدام کاملا بستگی به نوع کاربری
+                                            دارد:</p>
+                                        <ul class="mb-0 text-muted lh-lg">
+                                            <li>عموماً دوربین‌های <strong>دام</strong> برای محیط‌های داخلی و
+                                                <strong>بولت</strong> برای محیط‌های خارج از ساختمان استفاده می‌شود.</li>
+                                            <li>دوربین‌های <strong>اسپیددام (PTZ)</strong> به دوربین‌های گردان معروف
+                                                هستند و قابلیت زوم دارند. گران‌تر بوده و برای تعقیب سوژه مناسب‌اند.</li>
+                                            <li>دوربین <strong>فیش آی (Fisheye)</strong> قابلیت نمایش ۳۶۰ درجه‌ای دارد و
+                                                برای مرکز سالن‌های بزرگ و کارخانجات مناسب است.</li>
+                                            <li>دوربین <strong>پین هول (مخفی)</strong> برای فضاهایی که نیاز به نظارت
+                                                نامحسوس دارند استفاده می‌شود.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- سوال 2 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="faqHeading2">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#faqCollapse2" aria-expanded="false"
+                                        aria-controls="faqCollapse2">
+                                        ۲- مدت زمان ضبط دوربین مدار بسته چقدر است؟
+                                    </button>
+                                </h2>
+                                <div id="faqCollapse2" class="accordion-collapse collapse" aria-labelledby="faqHeading2"
+                                    data-bs-parent="#accordionFAQ">
+                                    <div class="accordion-body text-justify">
+                                        تصاویر دوربین مداربسته، بر روی هارددیسک که در دستگاه DVR یا NVR قرار دارد و یا
+                                        بر روی رم داخلی خود دوربین ذخیره می‌شود. از این رو مدت زمانی که دوربین می‌تواند
+                                        تصاویر را ذخیره کند به عوامل مختلفی همچون: میزان حافظه هارد یا رم، تعداد
+                                        دوربین‌ها، کیفیت تصاویر و استفاده از قابلیت تشخیص حرکت بستگی دارد.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- سوال 3 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="faqHeading3">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#faqCollapse3" aria-expanded="false"
+                                        aria-controls="faqCollapse3">
+                                        ۳- میدان دید و وضوح تصویر لنز دوربین با افزایش آن چگونه تغییر می‌کند؟
+                                    </button>
+                                </h2>
+                                <div id="faqCollapse3" class="accordion-collapse collapse" aria-labelledby="faqHeading3"
+                                    data-bs-parent="#accordionFAQ">
+                                    <div class="accordion-body text-justify">
+                                        با افزایش اندازه لنز دوربین مداربسته (که بر حسب میلی‌متر بیان می‌شود)، میدان دید
+                                        (زاویه دید) کمتر و محدودتر خواهد شد، اما در عوض جزئیات در فواصل دورتر به راحتی
+                                        قابل مشاهده و تشخیص خواهد بود (حالت زوم‌تری پیدا می‌کند).
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- سوال 4 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="faqHeading4">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#faqCollapse4" aria-expanded="false"
+                                        aria-controls="faqCollapse4">
+                                        ۴- منظور از سیستم مالتی پلکسر چیست؟
+                                    </button>
+                                </h2>
+                                <div id="faqCollapse4" class="accordion-collapse collapse" aria-labelledby="faqHeading4"
+                                    data-bs-parent="#accordionFAQ">
+                                    <div class="accordion-body text-justify">
+                                        سیستم مالتی پلکسر کمک می‌کند تا محل تحت نظارت را در بخش‌های مختلف به طور همزمان
+                                        کنترل کنید. اگر تعداد دوربین‌ها زیاد باشد، نمایش پشت سر هم و غیر همزمان مفید
+                                        نخواهد بود. سیستم مالتی پلکسر این امکان را به شما می‌دهد که در یک مانیتور به طور
+                                        همزمان ۸ تا ۱۲ تصویر (یا بیشتر) را بدون افت فریم مشاهده نمایید.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- سوال 5 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="faqHeading5">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#faqCollapse5" aria-expanded="false"
+                                        aria-controls="faqCollapse5">
+                                        ۵- یک دوربین مداربسته تا چند متر را می‌تواند فیلم بگیرد؟
+                                    </button>
+                                </h2>
+                                <div id="faqCollapse5" class="accordion-collapse collapse" aria-labelledby="faqHeading5"
+                                    data-bs-parent="#accordionFAQ">
+                                    <div class="accordion-body text-justify">
+                                        یک دوربین امنیتی خانگی یا اداری بسته به وضوح، سنسور و لنزی که استفاده می‌کند
+                                        معمولاً بین ۰ تا ۲۰ متر را به خوبی می‌بیند و تشخیص می‌دهد. با این حال،
+                                        دوربین‌های حرفه‌ای مانند PTZ با وضوح بالا نیز وجود دارند که می‌توانند در فواصل
+                                        دورتر، مسافتی بین ۰ تا ۲۰۰ متر را نیز پوشش دهند.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- سوال 6 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="faqHeading6">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#faqCollapse6" aria-expanded="false"
+                                        aria-controls="faqCollapse6">
+                                        ۶- چگونه به دوربین‌های مدار بسته دسترسی پیدا کنیم؟
+                                    </button>
+                                </h2>
+                                <div id="faqCollapse6" class="accordion-collapse collapse" aria-labelledby="faqHeading6"
+                                    data-bs-parent="#accordionFAQ">
+                                    <div class="accordion-body text-justify">
+                                        برای دسترسی و مشاهده تصاویر دوربین‌ها روش‌های مختلفی وجود دارد:
+                                        <ul class="mt-3 mb-0 text-muted lh-lg">
+                                            <li><strong>رابط وب:</strong> راه‌اندازی مستقیم و راحت بدون نیاز به
+                                                نرم‌افزار خاص.</li>
+                                            <li><strong>اپلیکیشن موبایل:</strong> با استفاده از نرم‌افزارهای اختصاصی
+                                                برند دوربین روی گوشی.</li>
+                                            <li><strong>نرم افزار Remote Desktop:</strong> برای کنترل از راه دور از طریق
+                                                کامپیوتر.</li>
+                                            <li><strong>اینترنت و مرورگر وب:</strong> با وارد کردن IP دستگاه.</li>
+                                            <li><strong>مانیتور محلی:</strong> مشاهده مستقیم تصاویر روی مانیتور متصل به
+                                                NVR یا DVR.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ================= پایان بخش FAQ ================= -->
+
+            <!-- در اینجا بنر آبی رنگ "دریافت مشاوره رایگان" (CTA) که قبلا داشتید قرار می گیرد -->
+
+            <!-- بنر تماس قطعی و اصلاح شده (بدون مشکل سفیدی متن) -->
+            <div class="p-4 p-md-5 rounded-4 shadow mt-5"
+                style="background: linear-gradient(135deg, #0d6efd 0%, #00d2ff 100%);">
+                <div class="row align-items-center text-center text-md-start">
+                    <div class="col-md-8 mb-4 mb-md-0">
+                        <h3 class="fw-bold mb-3" style="color: #ffffff;">دریافت مشاوره رایگان نصب و راه‌اندازی</h3>
+                        <p class="mb-0 fs-6" style="color: rgba(255, 255, 255, 0.9); line-height: 1.8;">
+                            برای دریافت مشاوره رایگان قبل از خرید، استعلام هزینه‌ها و درخواست نصب و راه‌اندازی
+                            دوربین‌های مداربسته توسط تیم حرفه‌ای <strong>تک‌نت (TECHNET)</strong> همین حالا با ما تماس
+                            بگیرید.
+                        </p>
+                    </div>
+                    <div class="col-md-4 text-center text-md-end">
+                        <a href="tel:09109694902"
+                            class="btn btn-light rounded-pill px-4 py-3 fw-bold shadow-sm d-inline-flex align-items-center"
+                            style="color: #0d6efd; background-color: #ffffff; border: none; transition: transform 0.2s;">
+                            <i class="bi bi-telephone-fill ms-2 fs-5"></i>
+                            <span class="fw-bold fs-5" dir="ltr">09109694902</span>
+
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <footer class="py-5 bg-dark text-white text-center">
+        <div class="container">
+            <h4 class="fw-bold text-primary mb-3">TECHNET</h4>
+            <p class="small text-white-50">تمامی حقوق برای TECHNET محفوظ است | ۱۴۰۳</p>
+            <div class="mt-3">
+                <a href="contact.html" class="text-white-50 text-decoration-none mx-2 small">تماس با ما</a>
+                <a href="about.html" class="text-white-50 text-decoration-none mx-2 small">درباره ما</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

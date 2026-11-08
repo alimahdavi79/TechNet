@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>خدمات تخصصی کامپیوتر | TECHNET</title>
+    
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+
+    <style>
+        .service-icon-lg {
+            font-size: 3.5rem;
+            background: var(--primary-grad);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+        }
+        .step-number {
+            width: 40px; height: 40px;
+            background: var(--primary-grad);
+            color: white;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-weight: bold; margin-bottom: 15px;
+        }
+        .check-list li {
+            list-style: none;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+        }
+        .check-list li i { color: #0d6efd; margin-left: 10px; }
+        /* =========================================
+   استایل‌های اختصاصی بخش خدمات کامپیوتر
+========================================= */
+
+/* کارت‌های خدمات */
+.computer-service-card {
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    border-top: 5px solid #6c757d;
+    transition: all 0.3s ease;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.computer-service-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+/* رنگ‌بندی اختصاصی حاشیه کارت‌ها در حالت هاور */
+.card-hardware:hover { border-top-color: #0d6efd; }
+.card-repair:hover { border-top-color: #ffc107; }
+.card-software:hover { border-top-color: #198754; }
+.card-graphic:hover { border-top-color: #dc3545; }
+.card-content:hover { border-top-color: #0dcaf0; }
+
+/* آیکون‌های بزرگ */
+.service-icon-lg {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+/* لیست ویژگی‌ها (چک‌مارک) */
+.check-list li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.check-list li i {
+    color: #0d6efd;
+    margin-left: 10px;
+    font-size: 1.1rem;
+    margin-top: 2px;
+}
+
+/* دایره شماره مراحل */
+.step-number {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #0d6efd, #0a58ca);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0 auto 20px;
+    box-shadow: 0 5px 15px rgba(13, 110, 253, 0.3);
+}
+
+/* کارت‌های مراحل */
+.process-card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    height: 100%;
+    transition: transform 0.3s;
+}
+
+.process-card:hover {
+    transform: translateY(-5px);
+}
+
+/* باکس ویژه هوش مصنوعی */
+.ai-highlight-box {
+    background: #f0f7ff;
+    border-radius: 15px;
+    padding: 25px;
+    border-right: 5px solid #0d6efd; /* راست‌چین شده برای زبان فارسی */
+    margin-top: 25px;
+}
+
+.ai-highlight-box h5 {
+    color: #0d6efd;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+/* استایل‌های بخش خدمات دو ستونه */
+.services-two-cols .computer-service-card {
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 40px 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    height: 100%;
+    border: 1px solid #f0f0f0;
+    transition: all 0.3s ease;
+}
+
+.services-two-cols .card-hardware {
+    border-top: 5px solid #0d6efd; /* رنگ آبی برای سخت‌افزار */
+}
+
+.services-two-cols .card-software {
+    border-top: 5px solid #198754; /* رنگ سبز برای نرم‌افزار */
+}
+
+.services-two-cols .computer-service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+.services-two-cols .service-icon-lg {
+    font-size: 3.5rem;
+    margin-bottom: 25px;
+}
+
+.services-two-cols .check-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.6;
+}
+
+.services-two-cols .check-list li i {
+    font-size: 1.2rem;
+    margin-left: 12px; /* فاصله آیکون از متن (راست‌چین) */
+}
+
+.services-two-cols .card-hardware .check-list li i { color: #0d6efd; }
+.services-two-cols .card-software .check-list li i { color: #198754; }
+/* =========================================
+   استایل‌های بخش امداد کامپیوتر
+========================================= */
+
+.emergency-service-item {
+    display: flex;
+    align-items: flex-start; /* تراز کردن از بالا */
+    margin-bottom: 25px;
+}
+
+.emergency-service-number {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #0d6efd;
+    opacity: 0.7;
+    line-height: 1;
+    margin-left: 20px; /* فاصله از متن در حالت راست‌چین */
+}
+
+.emergency-service-content h5 {
+    font-weight: bold;
+    color: #343a40;
+    margin-bottom: 5px;
+}
+
+.emergency-service-content p {
+    color: #6c757d;
+    font-size: 0.95rem;
+    margin-bottom: 0;
+}
+/* استایل‌های بخش توضیحات تکمیلی و آموزشی */
+.info-section-card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    background-color: #fff;
+    padding: 30px;
+    margin-bottom: 30px;
+    height: 100%;
+    transition: transform 0.3s;
+}
+
+.info-section-card:hover {
+    transform: translateY(-5px);
+}
+
+.info-icon {
+    width: 60px;
+    height: 60px;
+    background-color: #eef2ff;
+    color: #4361ee;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.benefit-list li {
+    margin-bottom: 12px;
+    position: relative;
+    padding-right: 20px;
+}
+
+.benefit-list li::before {
+    content: "•";
+    color: #4361ee;
+    font-size: 1.5em;
+    position: absolute;
+    right: 0;
+    top: -5px;
+}
+/* استایل‌های اختصاصی بخش سوالات متداول */
+.faq-section .accordion-item {
+    border: none;
+    margin-bottom: 15px;
+    border-radius: 10px !important;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+}
+
+.faq-section .accordion-button {
+    background-color: #fff;
+    color: #333;
+    font-weight: 600;
+    padding: 20px;
+    box-shadow: none !important; /* حذف سایه آبی هنگام کلیک */
+}
+
+.faq-section .accordion-button:not(.collapsed) {
+    background-color: #eef2ff; /* رنگ پس‌زمینه وقتی باز است */
+    color: #4361ee;
+}
+
+.faq-section .accordion-button:focus {
+    box-shadow: none;
+    border-color: rgba(0,0,0,.125);
+}
+
+.faq-section .accordion-body {
+    background-color: #fff;
+    color: #666;
+    line-height: 1.7;
+    padding: 20px;
+    border-top: 1px solid #f0f0f0;
+}
+
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top navbar-light">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary fs-3" href="index.html">TECHNET</a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">خانه</a></li>
+                     <li class="nav-item"><a class="nav-link active fw-bold" href="service-cctv.html">خدمات کامپبوتری </a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">درباره ما</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">تماس با ما</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header text-center">
+        <div class="container">
+            <i class="bi bi-pc-display-horizontal display-1 mb-3"></i>
+            <h1 class="display-4 fw-bold mb-3">سرویس و ارتقای <span class="text-info">تخصصی کامپیوتر</span></h1>
+            <p class="lead opacity-75">احیای سرعت و قدرت سیستم‌های شما با قطعات اصلی و ضمانت کتبی</p>
+        </div>
+    </header>
+
+   <!-- =========================================
+     بخش ۱: خدمات اصلی کامپیوتری (3 ستونی)
+========================================= -->
+<<!-- =========================================
+     بخش خدمات جامع کامپیوتر (دو ستونه)
+========================================= -->
+<section class="py-5 services-two-cols bg-light">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold mb-3">خدمات تخصصی کامپیوتر و لپ‌تاپ</h2>
+            <p class="text-muted">ارائه کامل‌ترین خدمات سخت‌افزاری و نرم‌افزاری با بالاترین کیفیت</p>
+        </div>
+
+        <div class="row g-4">
+            
+            <!-- ستون اول: خدمات سخت‌افزار -->
+            <div class="col-lg-6">
+                <div class="computer-service-card card-hardware">
+                    <div class="text-center">
+                        <div class="service-icon-lg text-primary"><i class="bi bi-cpu"></i></div>
+                        <h3 class="fw-bold mb-4 text-dark">خدمات سخت‌افزار کامپیوتر</h3>
+                    </div>
+                    <ul class="list-unstyled check-list p-0 m-0">
+                        <li><i class="bi bi-check-circle-fill"></i>تعمیر تمامی قطعات کامپیوتری (لپ‌تاپ و PC)</li>
+                        <li><i class="bi bi-check-circle-fill"></i>فروش تمامی قطعات سخت‌افزاری</li>
+                        <li><i class="bi bi-check-circle-fill"></i>تعمیرات انواع پرینتر، اسکنر، مودم، DVD-ROM و لیبل‌زن</li>
+                        <li><i class="bi bi-check-circle-fill"></i>مشاوره و اسمبل سیستم‌های طراحی و گیمینگ</li>
+                        <li><i class="bi bi-check-circle-fill"></i>فروش انواع لپ‌تاپ‌های نو و دست‌دوم</li>
+                        <li><i class="bi bi-check-circle-fill"></i>عیب‌یابی کامل سیستم‌های کامپیوتری</li>
+                        <li><i class="bi bi-check-circle-fill"></i>شارژ کارتریج پرینتر</li>
+                        <li><i class="bi bi-check-circle-fill"></i>تعمیر کامپیوتر، لپ‌تاپ و نوت‌بوک</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- ستون دوم: خدمات نرم‌افزار -->
+            <div class="col-lg-6">
+                <div class="computer-service-card card-software">
+                    <div class="text-center">
+                        <div class="service-icon-lg text-success"><i class="bi bi-window-stack"></i></div>
+                        <h3 class="fw-bold mb-4 text-dark">خدمات نرم‌افزار کامپیوتر</h3>
+                    </div>
+                    <ul class="list-unstyled check-list p-0 m-0">
+                        <li><i class="bi bi-check-circle-fill"></i>نصب انواع سیستم‌عامل (ویندوز ۱۱، ۱۰، ۸.۱، ۷)</li>
+                        <li><i class="bi bi-check-circle-fill"></i>نصب تمامی درایورهای مورد نیاز سیستم‌عامل</li>
+                        <li><i class="bi bi-check-circle-fill"></i>نصب انواع نرم‌افزارهای گرافیکی و کاربردی</li>
+                        <li><i class="bi bi-check-circle-fill"></i>بروزرسانی انواع سیستم‌عامل‌ها و نرم‌افزارها</li>
+                        <li><i class="bi bi-check-circle-fill"></i>نصب آنتی‌ویروس (اکتیو شده و اورجینال)</li>
+                        <li><i class="bi bi-check-circle-fill"></i>نصب نرم‌افزارهای تخصصی برای تمامی رشته‌ها</li>
+                        <li><i class="bi bi-check-circle-fill"></i>ریکاوری و پشتیبان‌گیری از تمامی اطلاعات</li>
+                        <li><i class="bi bi-check-circle-fill"></i>مشاوره نصب سیستم‌عامل با توجه به نیازهای مشتری</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- =========================================
+     بخش امداد کامپیوتر و خدمات سیار
+========================================= -->
+<section class="py-5">
+    <div class="container">
+        <div class="row align-items-center g-5">
+
+            <!-- ستون سمت راست: تصویر یا آیکون -->
+            <div class="col-lg-5">
+                <div class="text-center">
+                    <!-- شما می‌توانید این آیکون را با یک تصویر واقعی (مثلا تصویر یک تکنسین) جایگزین کنید -->
+                    <i class="bi bi-headset display-1 text-primary opacity-50"></i>
+                </div>
+            </div>
+
+            <!-- ستون سمت چپ: متن و توضیحات -->
+            <div class="col-lg-7">
+                <h2 class="fw-bold mb-3">امداد کامپیوتر و خدمات کامپیوتری در البرز</h2>
+                <p class="text-muted mb-4 lead" style="line-height: 1.8;">
+                    امداد کامپیوتر و اورژانس کامپیوتر ، ارائه‌دهنده کلیه خدمات کامپیوتر و تعمیرات لپ‌تاپ در محل شماست. تخصص و سابقه ما، تضمین کیفیت خدمات ماست.
+                </p>
+
+                <!-- آیتم ۱ -->
+                <div class="emergency-service-item">
+                    <div class="emergency-service-number">۰۱</div>
+                    <div class="emergency-service-content">
+                        <h5>تعمیر لپ تاپ در محل</h5>
+                        <p>تعمیرات تخصصی انواع لپ‌تاپ در منزل یا محل کار شما، با پوشش سراسری در تمام نقاط البرز.</p>
+                    </div>
+                </div>
+
+                <!-- آیتم ۲ -->
+                <div class="emergency-service-item">
+                    <div class="emergency-service-number">۰۲</div>
+                    <div class="emergency-service-content">
+                        <h5>خدمات کامپیوتری سیار</h5>
+                        <p>مهم‌ترین سرویس ما، ارائه خدمات کامپیوتر در منزل است که در تمام ساعات شبانه‌روز آماده خدمت‌رسانی به شما هستیم.</p>
+                    </div>
+                </div>
+                
+                <!-- آیتم ۳ -->
+                <div class="emergency-service-item">
+                    <div class="emergency-service-number">۰۳</div>
+                    <div class="emergency-service-content">
+                        <h5>خرید و فروش کامپیوتر</h5>
+                        <p>خرید و فروش کامپیوتر و لپ‌تاپ‌های دست دوم (استوک) در محل با سرویس‌دهی در تمام نقاط البرز.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+   <!-- =========================================
+     بخش ۲: مراحل ارائه خدمات
+========================================= -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold mb-3">روند تعمیر سیستم شما در تک نت </h2>
+            <p class="text-muted">مراحل شفاف و سریع ارائه خدمات، در محل شما یا به صورت آنلاین</p>
+        </div>
+        
+        <div class="row g-4">
+            <!-- مرحله 1 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="process-card text-center shadow-sm border-0">
+                    <div class="step-number">۱</div>
+                    <h5 class="fw-bold mb-3">تماس و مشاوره</h5>
+                    <p class="small text-muted mb-0">اعلام مشکل توسط شما و دریافت مشاوره رایگان تلفنی جهت بررسی راهکارهای اولیه.</p>
+                </div>
+            </div>
+            <!-- مرحله 2 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="process-card text-center shadow-sm border-0">
+                    <div class="step-number">۲</div>
+                    <h5 class="fw-bold mb-3">عیب‌یابی اولیه</h5>
+                    <p class="small text-muted mb-0">اتصال ریموت برای رفع خطاهای نرم‌افزاری یا اعزام کارشناس برای بررسی سخت‌افزار.</p>
+                </div>
+            </div>
+            <!-- مرحله 3 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="process-card text-center shadow-sm border-0">
+                    <div class="step-number">۳</div>
+                    <h5 class="fw-bold mb-3">تعمیر و ارتقاء</h5>
+                    <p class="small text-muted mb-0">انجام دقیق تعمیرات یا جایگزینی قطعات معیوب با قطعات اورجینال دارای گارانتی.</p>
+                </div>
+            </div>
+            <!-- مرحله 4 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="process-card text-center shadow-sm border-0">
+                    <div class="step-number">۴</div>
+                    <h5 class="fw-bold mb-3">تست و تحویل</h5>
+                    <p class="small text-muted mb-0">بررسی پایداری سیستم در حضور شما، تحویل نهایی و ارائه فاکتور معتبر.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-5">
+            <a href="tel:02152605" class="btn btn-primary btn-lg px-5 rounded-pill shadow">
+                <i class="bi bi-headset me-2"></i>درخواست اعزام کارشناس
+            </a>
+        </div>
+    </div>
+</section>
+<!-- =========================================
+     بخش ۳: هوش مصنوعی (AI) در خدمات کامپیوتر
+========================================= -->
+<section class="py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-5 order-lg-2 mb-4 mb-lg-0">
+                <div class="bg-light rounded-4 p-4 text-center border" style="min-height: 300px; display: flex; align-items: center; justify-content: center;">
+                    <i class="bi bi-robot text-primary display-1 opacity-50"></i>
+                    <!-- می‌توانید این div را حذف کرده و یک تگ img واقعی جایگزین آن کنید -->
+                    <span class="d-block mt-3 text-muted">آینده تکنولوژی در تک نت </span>
+                </div>
+            </div>
+            <div class="col-lg-7 order-lg-1">
+                <h2 class="fw-bold mb-3">آینده خدمات کامپیوتری با هوش مصنوعی (AI)</h2>
+                <p class="text-muted lead mb-4">ما در حال بررسی و ادغام راهکارهای مبتنی بر هوش مصنوعی برای ارائه خدمات هوشمندتر و پیشگیرانه هستیم:</p>
+                
+                <div class="ai-highlight-box">
+                    <h5><i class="bi bi-stars me-2"></i>مزایای خدمات مبتنی بر AI:</h5>
+                    <ul class="list-unstyled mb-0 check-list mt-3">
+                        <li><i class="bi bi-activity"></i>پیش‌بینی خرابی قطعات حساس (مانند هارد دیسک) پیش از وقوع بحران</li>
+                        <li><i class="bi bi-robot"></i>پشتیبانی هوشمند و عیب‌یابی خودکار خطاهای سیستمی ویندوز</li>
+                        <li><i class="bi bi-speedometer2"></i>بهینه‌سازی خودکار منابع سخت‌افزاری جهت افزایش راندمان سیستم</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- =========================================
+     بخش ۴: خدمات جانبی (گرافیک، محتوا و اداری)
+========================================= -->
+<section class="py-5 bg-light border-top">
+    <div class="container">
+        <h2 class="fw-bold text-center mb-5">سایر خدمات تخصصی ما</h2>
+        
+        <div class="row g-4">
+            <!-- گرافیک -->
+            <div class="col-lg-4 col-md-6">
+                <div class="computer-service-card card-graphic">
+                    <div class="service-icon-lg text-danger"><i class="bi bi-palette"></i></div>
+                    <h4 class="fw-bold mb-3">طراحی گرافیک</h4>
+                    <p class="text-muted small">طراحی لوگو، کارت ویزیت، کاتالوگ، بنرهای تبلیغاتی و ادیت تصاویر با بالاترین استانداردهای چاپ و فضای مجازی.</p>
+                </div>
+            </div>
+            <!-- محتوا -->
+            <div class="col-lg-4 col-md-6">
+                <div class="computer-service-card card-content">
+                    <div class="service-icon-lg text-info"><i class="bi bi-file-earmark-text"></i></div>
+                    <h4 class="fw-bold mb-3">تولید محتوا و تایپ</h4>
+                    <p class="text-muted small">انجام سریع تایپ متون، ساخت پاورپوینت‌های حرفه‌ای، ویراستاری و اجرای پروژه‌های تحقیقاتی و دانشجویی.</p>
+                </div>
+            </div>
+            <!-- تجهیزات اداری -->
+            <div class="col-lg-4 col-md-6">
+                <div class="computer-service-card card-software">
+                    <div class="service-icon-lg text-success"><i class="bi bi-printer"></i></div>
+                    <h4 class="fw-bold mb-3">ماشین‌های اداری</h4>
+                    <p class="text-muted small">سرویس و تعمیر انواع پرینتر و دستگاه فکس، شارژ کارتریج در محل و راه‌اندازی شبکه پرینترهای سازمانی.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =========================================
+     بخش توضیحات تکمیلی و آموزشی (امداد رایانه)
+========================================= -->
+<section class="py-5 bg-light">
+    <div class="container">
+        
+        <!-- مقدمه -->
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-10 text-center">
+                <h2 class="fw-bold mb-4">امداد کامپیوتر و امداد رایانه؛ ضرورتی در دنیای مدرن</h2>
+                <p class="text-muted lead" style="text-align: justify;">
+                    در دنیای مدرن امروزی، کامپیوترها و رایانه‌ها نقش بسیار مهمی در زندگی روزمره ما ایفا می‌کنند. از کارهای روزمره گرفته تا کاربردهای حرفه‌ای و تخصصی، وابستگی به این دستگاه‌ها به گونه‌ای است که هرگونه خرابی یا مشکل در عملکرد آن‌ها می‌تواند زندگی ما را تحت تأثیر قرار دهد. به همین دلیل، خدمات امداد کامپیوتر و امداد رایانه به یکی از ضروری‌ترین خدمات تبدیل شده‌اند.
+                </p>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            
+            <!-- ستون اول: دلایل اهمیت -->
+            <div class="col-md-6 col-lg-4">
+                <div class="info-section-card">
+                    <div class="info-icon"><i class="bi bi-shield-check"></i></div>
+                    <h4 class="fw-bold mb-3">دلایل اهمیت امداد رایانه</h4>
+                    <ul class="list-unstyled benefit-list text-muted">
+                        <li><strong>افزایش بهره‌وری:</strong> تعمیر سریع مشکلات برای جلوگیری از توقف کار سازمان‌ها و افراد.</li>
+                        <li><strong>حفاظت از داده‌ها:</strong> جلوگیری از خسارت‌های جبران‌ناپذیر با بازیابی اطلاعات حیاتی.</li>
+                        <li><strong>افزایش طول عمر:</strong> سرویس دوره‌ای که هزینه‌های سنگین جایگزینی سیستم را کاهش می‌دهد.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- ستون دوم: خدمات شامل چه مواردی است -->
+            <div class="col-md-6 col-lg-4">
+                <div class="info-section-card">
+                    <div class="info-icon"><i class="bi bi-tools"></i></div>
+                    <h4 class="fw-bold mb-3">پوشش خدمات امداد</h4>
+                    <ul class="list-unstyled benefit-list text-muted">
+                        <li><strong>سخت‌افزار:</strong> تشخیص و تعمیر قطعات (هارد، پردازنده و...).</li>
+                        <li><strong>نرم‌افزار:</strong> نصب ویندوز، آنتی‌ویروس و رفع باگ‌های سیستم.</li>
+                        <li><strong>بازیابی داده‌ها:</strong> بازگردانی اطلاعات پاک شده با ابزارهای تخصصی.</li>
+                        <li><strong>پشتیبانی و مشاوره:</strong> آموزش کاربران برای استفاده بهینه از سیستم.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- ستون سوم: چرا ما؟ -->
+            <div class="col-md-6 col-lg-4 mx-auto">
+                <div class="info-section-card">
+                    <div class="info-icon"><i class="bi bi-person-check-fill"></i></div>
+                    <h4 class="fw-bold mb-3">چرا خدمات ما؟</h4>
+                    <ul class="list-unstyled benefit-list text-muted">
+                        <li><strong>صرفه‌جویی در زمان:</strong> حل مشکل در سریع‌ترین زمان بدون نیاز به جستجوی راه‌حل.</li>
+                        <li><strong>حرفه‌ای بودن:</strong> استفاده از تجربه تکنسین‌ها برای حل دقیق مشکلات.</li>
+                        <li><strong>امنیت بالا:</strong> رفع مشکلات امنیتی و حفظ حریم خصوصی داده‌های شما.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- نتیجه‌گیری -->
+        <div class="row mt-5">
+            <div class="col-12">
+                <div class="bg-white p-4 rounded-3 shadow-sm border-start border-5 border-primary">
+                    <h5 class="fw-bold text-primary mb-2">نتیجه‌گیری</h5>
+                    <p class="text-muted mb-0">
+                        در دنیای امروزی، اهمیت خدمات امداد کامپیوتر و رایانه بیش از پیش احساس می‌شود. این خدمات نه تنها به حفظ بهره‌وری و امنیت ما کمک می‌کنند، بلکه می‌توانند به افزایش عمر مفید دستگاه‌ها و کاهش هزینه‌های جایگزینی نیز منجر شوند. استفاده از خدمات امداد کامپیوتر یک سرمایه‌گذاری هوشمندانه است.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+    <section class="py-5">
+        <div class="container text-center">
+            <div class="modern-card p-5 bg-dark text-white">
+                <h2 class="fw-bold mb-4">سیستم شما کند شده یا نیاز به تعمیر دارد؟</h2>
+                <p class="lead mb-5 opacity-75">همین حالا با مهندس مهدوی تماس بگیرید و از مشاوره رایگان بهره‌مند شوید.</p>
+                <a href="tel:09109694902" class="btn btn-main btn-lg px-5 py-3">
+                    <i class="bi bi-telephone-fill me-2"></i> تماس فوری: ۰۹۱۰۹۶۹۴۹۰۲
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================
+     بخش سوالات متداول (FAQ)
+========================================= -->
+<section class="py-5 faq-section bg-light">
+    <div class="container">
+        
+        <div class="text-center mb-5">
+            <h2 class="fw-bold">سوالات متداول شما</h2>
+            <p class="text-muted">پاسخ به پرتکرارترین سوالات مشتریان درباره خدمات امداد کامپیوتر</p>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="accordion" id="faqAccordion">
+
+                    <!-- سوال ۱ -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                ۱. آیا خدمات تعمیر کامپیوتر در محل انجام می‌شود یا باید دستگاه را حمل کنیم؟
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                بله، تخصص اصلی ما "امداد کامپیوتر سیار" است. تکنسین‌های ما به منزل یا محل کار شما در سراسر البرز مراجعه کرده و در ۹۰٪ موارد مشکل را همان‌جا حل می‌کنند. تنها در موارد خاص سخت‌افزاری نیاز به انتقال دستگاه به کارگاه است.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- سوال ۲ -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                ۲. هزینه ایاب و ذهاب و تعمیرات چگونه محاسبه می‌شود؟
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                هزینه‌ها کاملاً شفاف و طبق نرخ‌نامه مصوب اتحادیه است. هزینه ایاب و ذهاب ثابت بوده و هزینه تعمیرات بسته به نوع مشکل (نرم‌افزاری یا سخت‌افزاری) قبل از شروع کار به شما اعلام می‌شود.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- سوال ۳ -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                ۳. آیا اطلاعات شخصی و داده‌های من در امنیت هستند؟
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                صد در صد. حفظ حریم خصوصی و امنیت اطلاعات شما اولویت اول ماست. تمامی تکنسین‌های ما احراز هویت شده و مورد اعتماد هستند و فرآیند تعمیر در حضور خود شما انجام می‌شود.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- سوال ۴ -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                ۴. چه نوع دستگاه‌هایی را تعمیر می‌کنید؟ (فقط کیس یا لپ‌تاپ هم هست؟)
+                            </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                ما تمامی دستگاه‌های کامپیوتری شامل کیس (PC)، انواع لپ‌تاپ (تمامی برندها)، نوت‌بوک و حتی سیستم‌های All-in-One را تعمیر و سرویس می‌کنیم.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- سوال ۵ -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFive">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                ۵. اگر قطعه‌ای نیاز به تعویض داشته باشد، قطعه اورجینال استفاده می‌کنید؟
+                            </button>
+                        </h2>
+                        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                بله، تمامی قطعاتی که توسط تیم ما تعویض می‌شوند، اورجینال بوده و دارای گارانتی معتبر هستند. فاکتور خرید قطعه نیز به شما ارائه خواهد شد.
+                            </div>
+                        </div>
+                    </div>
+    </section>
+
+      <footer class="py-4 bg-dark text-white text-center">
+        <p class="mb-0 small opacity-50">© ۱۴۰۳ TECHNET - تمامی حقوق محفوظ است</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

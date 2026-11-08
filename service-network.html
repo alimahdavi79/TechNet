@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>خدمات تخصصی شبکه | TECHNET</title>
+    
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+       <link rel="stylesheet" href="assets/css/style.css">
+
+    <style>
+        /* =========================================
+   استایل های اختصاصی مراحل راه‌اندازی شبکه
+========================================= */
+.network-step-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 20px 25px;
+    margin-bottom: 20px;
+    border-right: 4px solid #0d6efd;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.network-step-card:hover {
+    transform: translateX(-5px);
+    box-shadow: 0 8px 25px rgba(13, 110, 253, 0.1);
+}
+
+.step-number-badge {
+    background: linear-gradient(135deg, #0d6efd, #0dcaf0);
+    color: #ffffff;
+    width: 35px;
+    height: 35px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+    box-shadow: 0 4px 10px rgba(13, 110, 253, 0.3);
+}
+
+/* استایل لیست مزایا (ارتقا یافته برای این بخش) */
+.benefit-list-item {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 12px 15px;
+    margin-bottom: 12px;
+    border: 1px solid #eef2f5;
+    transition: background-color 0.2s ease;
+}
+
+.benefit-list-item:hover {
+    background-color: #e9f2ff;
+    border-color: #cce0ff;
+}
+
+        .network-badge {
+            background: rgba(13, 110, 253, 0.1);
+            color: #0d6efd;
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        .feature-box {
+            border-right: 3px solid #0d6efd;
+            padding-right: 20px;
+            margin-bottom: 30px;
+        }
+        .tech-stack {
+            background: #0a192f;
+            border-radius: 20px;
+            padding: 40px;
+            color: white;
+        }
+        .pulse-icon {
+            animation: pulse-blue 2s infinite;
+            border-radius: 50%;
+        }
+        @keyframes pulse-blue {
+            0% { box-shadow: 0 0 0 0 rgba(13, 110, 253, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(13, 110, 253, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(13, 110, 253, 0); }
+        }
+        /* استایل‌های اختصاصی خدمات اکتیو و پسیو */
+.passive-list-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 10px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    transition: all 0.2s;
+}
+.passive-list-item:hover {
+    background: #e9ecef;
+    transform: translateX(-5px);
+}
+.passive-list-item i {
+    font-size: 1.2rem;
+    color: #198754; /* رنگ سبز */
+    margin-left: 10px;
+}
+
+.active-service-card {
+    border: none;
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    height: 100%;
+    border-right: 4px solid #0dcaf0; /* رنگ فیروزه‌ای */
+    transition: transform 0.3s;
+}
+.active-service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.intro-box {
+    background: linear-gradient(135deg, #0a192f 0%, #1c3d6e 100%);
+    color: white;
+    border-radius: 20px;
+    padding: 40px;
+    position: relative;
+    overflow: hidden;
+}
+.intro-box::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: url('pattern.png') opacity 0.1; /* پترن اختیاری */
+    pointer-events: none;
+}
+/* استایل بخش چالش‌ها */
+.pain-point-item {
+    background: #fff3cd;
+    color: #856404;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    border-right: 5px solid #ffc107;
+    font-size: 0.95rem;
+}
+
+/* استایل روش‌های همکاری */
+.support-method-card {
+    background: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: 15px;
+    padding: 25px;
+    height: 100%;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+.support-method-card:hover {
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border-color: #0dcaf0;
+    transform: translateY(-5px);
+}
+.support-method-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #0d6efd;
+}
+
+/* استایل چرا تک نت */
+.feature-grid-item {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 12px;
+    height: 100%;
+    border: 1px dashed #ced4da;
+}
+.feature-grid-item h6 {
+    font-weight: bold;
+    color: #212529;
+}
+
+/* استایل سوالات متداول */
+.network-faq .accordion-button:not(.collapsed) {
+    background-color: #e7f1ff;
+    color: #0c63e4;
+}
+
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top navbar-light">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary fs-3" href="index.html">TECHNET</a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">خانه</a></li>
+                     <li class="nav-item"><a class="nav-link active fw-bold" href="service-cctv.html">خدمات شبکه </a> </li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">درباره ما</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">تماس با ما</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header text-center">
+        <div class="container">
+            <div class="pulse-icon d-inline-block mb-3">
+                <i class="bi bi-diagram-3 display-1 text-info"></i>
+            </div>
+            <h1 class="display-4 fw-bold mb-3">طراحی و اجرای <span class="text-info">شبکه‌های پایدار</span></h1>
+            <p class="lead opacity-75">از کابل‌کشی ساخت‌یافته تا پیکربندی حرفه‌ای سرور و امنیت میکروتیک</p>
+        </div>
+    </header>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="modern-card">
+                        <span class="network-badge">Passive Services</span>
+                        <h3 class="fw-bold mb-3">خدمات پسیو (زیرساخت)</h3>
+                        <p class="text-muted mb-4">اجرای فیزیکی شبکه با رعایت استانداردهای کابل‌کشی ساخت‌یافته جهت پایداری ۱۰ ساله سیستم.</p>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul class="list-unstyled">
+                                    <li class="mb-2"><i class="bi bi-check-circle text-primary me-2"></i> کابل‌کشی Cat6 و Cat7</li>
+                                    <li class="mb-2"><i class="bi bi-check-circle text-primary me-2"></i> آرایش تخصصی رک</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <ul class="list-unstyled">
+                                    <li class="mb-2"><i class="bi bi-check-circle text-primary me-2"></i> فیبر نوری و ترانکینگ</li>
+                                    <li class="mb-2"><i class="bi bi-check-circle text-primary me-2"></i> تست فلوک شبکه</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="modern-card">
+                        <span class="network-badge">Active Services</span>
+                        <h3 class="fw-bold mb-3">خدمات اکتیو (نرم‌افزاری)</h3>
+                        <p class="text-muted mb-4">راه‌اندازی سرویس‌های تحت شبکه، مدیریت کاربران و برقراری امنیت دیتای سازمانی.</p>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul class="list-unstyled">
+                                    <li class="mb-2"><i class="bi bi-check-circle text-primary me-2"></i> کانفیگ میکروتیک و سیسکو</li>
+                                    <li class="mb-2"><i class="bi bi-check-circle text-primary me-2"></i> راه‌اندازی اکتیو دایرکتوری</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <ul class="list-unstyled">
+                                    <li class="mb-2"><i class="bi bi-check-circle text-primary me-2"></i> مجازی‌سازی (ESXi)</li>
+                                    <li class="mb-2"><i class="bi bi-check-circle text-primary me-2"></i> راهکارهای پشتیبان‌گیری</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- Section: مراحل راه‌اندازی و نصب شبکه -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold mb-3">مراحل راه‌اندازی و نصب شبکه‌ و سرور</h2>
+            <p class="text-muted fs-5">خدمات تخصصی توسط گروه <span class="text-primary fw-bold">تک نت </span></p>
+        </div>
+
+        <div class="row g-4">
+            <!-- ستون مراحل انجام کار (5 گام) -->
+            <div class="col-lg-7">
+                
+                <!-- مرحله 1 -->
+                <div class="network-step-card">
+                    <div class="step-number-badge">۱</div>
+                    <h4 class="h5 fw-bold mb-3">اعلام درخواست نیاز به نصب و راه‌اندازی</h4>
+                    <p class="text-muted mb-3 line-height-lg">
+                        اولین مرحله برای راه‌اندازی شبکه در محل شما تماس با کارشناسان ما و اعلام درخواست برای دریافت خدمات است. ما امکانات و وضعیت موجود را سنجیده و با زمان‌بندی دقیق آماده خدمت‌رسانی هستیم.
+                    </p>
+                    <div class="d-flex flex-wrap gap-2 mt-2">
+                        <a href="tel:09109694902" class="btn btn-outline-primary btn-sm rounded-pill px-3">
+                            <i class="bi bi-telephone-fill me-1"></i> 0910-9694902
+                        </a>
+                    </div>
+                </div>
+
+                <!-- مرحله 2 -->
+                <div class="network-step-card">
+                    <div class="step-number-badge">۲</div>
+                    <h4 class="h5 fw-bold mb-3">مشاوره و ارائه راهکار</h4>
+                    <p class="text-muted mb-0 line-height-lg">
+                        ارائه مشاوره تخصصی و صادقانه بر اساس استانداردهای معتبر برای بالا بردن سرعت، کاهش هزینه و افزایش امنیت. پس از توافق، کارشناسان ما طراحی شبکه را آغاز می‌کنند.
+                    </p>
+                </div>
+
+                <!-- مرحله 3 -->
+                <div class="network-step-card">
+                    <div class="step-number-badge">۳</div>
+                    <h4 class="h5 fw-bold mb-3">نصب و پیاده‌سازی شبکه</h4>
+                    <p class="text-muted mb-0 line-height-lg">
+                        پس از عقد قرارداد و با توجه به استراتژی تدوین شده و طراحی انجام شده، تیم فنی اقدام به اجرای فیزیکی و نرم‌افزاری شبکه در شرکت شما خواهند کرد.
+                    </p>
+                </div>
+
+                <!-- مرحله 4 -->
+                <div class="network-step-card">
+                    <div class="step-number-badge">۴</div>
+                    <h4 class="h5 fw-bold mb-3">تست و بررسی عملکرد صحیح</h4>
+                    <p class="text-muted mb-0 line-height-lg">
+                        قبل از تحویل، تمامی اجزا (بیسیم، کابلی و سرورها) تست می‌شوند تا از صحت عملکرد، کیفیت و سرعت ارتباط درون‌سازمانی اطمینان کامل حاصل شود.
+                    </p>
+                </div>
+
+                <!-- مرحله 5 -->
+                <div class="network-step-card">
+                    <div class="step-number-badge">۵</div>
+                    <h4 class="h5 fw-bold mb-3">آموزش و ارائه مستندات</h4>
+                    <p class="text-muted mb-0 line-height-lg">
+                        پس از راه‌اندازی نهایی، مستندات شبکه پیاده‌سازی شده به کارفرما ارائه شده و به اپراتورها چگونگی استفاده اصولی از شبکه برای حفظ بالاترین کیفیت آموزش داده می‌شود.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- ستون مزایای خدمات (گروه استاد شبکه) -->
+            <div class="col-lg-5">
+                <div class="modern-card p-4 h-100 sticky-top" style="top: 100px; z-index: 1;">
+                    <div class="text-center mb-4 pb-3 border-bottom">
+                        <i class="bi bi-shield-check text-primary" style="font-size: 3rem;"></i>
+                        <h3 class="h4 fw-bold mt-2">چرا گروه تک نت؟</h3>
+                        <p class="text-muted small">مزایای استفاده از خدمات تخصصی ما</p>
+                    </div>
+
+                    <div class="benefits-container">
+                        <div class="benefit-list-item d-flex align-items-center">
+                            <i class="bi bi-check-circle-fill text-success fs-5 ms-3"></i>
+                            <span class="fw-semibold text-dark">ارائه راهکار متناسب با بودجه و کسب‌و‌کار</span>
+                        </div>
+                        
+                        <div class="benefit-list-item d-flex align-items-center">
+                            <i class="bi bi-check-circle-fill text-success fs-5 ms-3"></i>
+                            <span class="fw-semibold text-dark">مشاوره رایگان و تعرفه‌های کاملاً رقابتی</span>
+                        </div>
+
+                        <div class="benefit-list-item d-flex align-items-center">
+                            <i class="bi bi-check-circle-fill text-success fs-5 ms-3"></i>
+                            <span class="fw-semibold text-dark">سابقه‌ی طولانی در نصب شبکه و سرور</span>
+                        </div>
+
+                        <div class="benefit-list-item d-flex align-items-center">
+                            <i class="bi bi-check-circle-fill text-success fs-5 ms-3"></i>
+                            <span class="fw-semibold text-dark">رضایت بالای مشتریان و کیفیت تضمینی</span>
+                        </div>
+
+                        <div class="benefit-list-item d-flex align-items-center">
+                            <i class="bi bi-check-circle-fill text-success fs-5 ms-3"></i>
+                            <span class="fw-semibold text-dark">سرعت بالا در انجام خدمات و پیاده‌سازی</span>
+                        </div>
+
+                        <div class="benefit-list-item d-flex align-items-center">
+                            <i class="bi bi-check-circle-fill text-success fs-5 ms-3"></i>
+                            <span class="fw-semibold text-dark">پشتیبانی قدرتمند و پاسخگویی سریع</span>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4 pt-3 text-center">
+                        <a href="tel:09109694902" class="btn btn-main w-100 py-3 rounded-3 shadow-sm">
+                            <i class="bi bi-headset me-2"></i> دریافت مشاوره رایگان
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- =========================================
+     بخش ۱: خدمات پسیو شبکه (Passive)
+========================================= -->
+<section class="py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-5 mb-4 mb-lg-0">
+                <span class="badge bg-success mb-2 px-3 py-2 rounded-pill">زیرساخت فیزیکی</span>
+                <h2 class="fw-bold mb-4">نصب شبکه و سرور – <span class="text-success">خدمات پسیو</span></h2>
+                <p class="text-muted lead text-justify">
+                    خدمات پسیو شبکه یکی از مهم‌ترین بخش‌های خدمات نصب و راه‌اندازی شبکه و سرور است که به زیرساخت فیزیکی شبکه گفته می‌شود. با توجه به تجهیزات و تکنولوژی‌های مورد استفاده، خدمات متنوعی در تک نت قابل ارائه است.
+                </p>
+            </div>
+            <div class="col-lg-7">
+                <div class="row g-3">
+                    <!-- ستون اول -->
+                    <div class="col-md-6">
+                        <div class="passive-list-item">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>پیاده‌سازی انواع شبکه‌های کابلی</span>
+                        </div>
+                        <div class="passive-list-item">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>پیاده‌سازی انواع شبکه‌های وایرلس</span>
+                        </div>
+                        <div class="passive-list-item">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>طراحی استاندارد دیتاسنتر و اتاق سرور</span>
+                        </div>
+                        <div class="passive-list-item">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>نصب تجهیزات (سرور، سوئیچ، روتر)</span>
+                        </div>
+                        <div class="passive-list-item">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>کابل‌کشی برق و نصب UPS</span>
+                        </div>
+                    </div>
+                    <!-- ستون دوم -->
+                    <div class="col-md-6">
+                        <div class="passive-list-item">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>نصب دوربین‌های مداربسته (آنالوگ/IP)</span>
+                        </div>
+                        <div class="passive-list-item">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>زیرساخت سانترال پاناسونیک</span>
+                        </div>
+                        <div class="passive-list-item">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>داکت‌کشی و ترانکینگ شبکه</span>
+                        </div>
+                        <div class="passive-list-item">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>نصب پریزها، کیستون‌ها و آرایش رک</span>
+                        </div>
+                        <div class="passive-list-item">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>کابل‌کشی ترکیبی (شبکه، تلفن، برق)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =========================================
+     بخش ۲: خدمات اکتیو شبکه (Active)
+========================================= -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="text-center mb-5">
+            <span class="badge bg-info text-dark mb-2 px-3 py-2 rounded-pill">پیکربندی نرم‌افزاری</span>
+            <h2 class="fw-bold mb-3">نصب شبکه و سرور – <span class="text-info">خدمات اکتیو</span></h2>
+            <p class="text-muted mx-auto" style="max-width: 800px;">
+                خدمات اکتیو شامل پیکربندی امن تجهیزات و نصب سرویس‌های نرم‌افزاری است. تک نت راهکارهای حرفه‌ای خود را مطابق با نیاز شرکت‌ها ارائه می‌دهد.
+            </p>
+        </div>
+
+        <div class="row g-4">
+            <!-- آیتم ۱ -->
+            <div class="col-md-6 col-lg-4">
+                <div class="active-service-card">
+                    <h5 class="fw-bold mb-3"><i class="bi bi-windows text-primary ms-2"></i>سرویس‌های مایکروسافت/لینوکس</h5>
+                    <p class="text-muted small">نصب و راه‌اندازی انواع سرویس‌های مبتنی بر ویندوز و لینوکس، طراحی و پیاده‌سازی سرویس‌های Domain، Active Directory و DNS.</p>
+                </div>
+            </div>
+            
+            <!-- آیتم ۲ -->
+            <div class="col-md-6 col-lg-4">
+                <div class="active-service-card">
+                    <h5 class="fw-bold mb-3"><i class="bi bi-router text-danger ms-2"></i>تجهیزات شبکه و میکروتیک</h5>
+                    <p class="text-muted small">پیکربندی انواع سوئیچ، روتر، اکسس‌پوینت، فایروال و UTM. برقراری اتصال و راه‌اندازی حرفه‌ای روترهای Mikrotik.</p>
+                </div>
+            </div>
+
+            <!-- آیتم ۳ -->
+            <div class="col-md-6 col-lg-4">
+                <div class="active-service-card">
+                    <h5 class="fw-bold mb-3"><i class="bi bi-shield-lock text-success ms-2"></i>امنیت و آنتی‌ویروس</h5>
+                    <p class="text-muted small">نصب آنتی‌ویروس‌های تحت شبکه جهت امنیت کلاینت‌ها و سرورها. راه‌اندازی سیستم‌های بکاپ‌گیری اتوماتیک سخت‌افزاری و نرم‌افزاری.</p>
+                </div>
+            </div>
+
+            <!-- آیتم ۴ -->
+            <div class="col-md-6 col-lg-4">
+                <div class="active-service-card">
+                    <h5 class="fw-bold mb-3"><i class="bi bi-hdd-network text-warning ms-2"></i>مجازی‌سازی (Virtualization)</h5>
+                    <p class="text-muted small">راه‌کارهای مجازی‌سازی سخت‌افزاری (ESXi, Hyper-V) و نرم‌افزاری (Citrix) جهت کاهش هزینه، مدیریت آسان و استفاده بهینه از منابع.</p>
+                </div>
+            </div>
+
+            <!-- آیتم ۵ -->
+            <div class="col-md-6 col-lg-4">
+                <div class="active-service-card">
+                    <h5 class="fw-bold mb-3"><i class="bi bi-telephone-forward text-secondary ms-2"></i>سیستم‌های VoIP</h5>
+                    <p class="text-muted small">راه‌اندازی تلفن تحت شبکه (VoIP) و ویدیو کنفرانس با سیستم‌های Cisco, Asterisk, Microsoft Lync و Polycom.</p>
+                </div>
+            </div>
+
+            <!-- آیتم ۶ -->
+            <div class="col-md-6 col-lg-4">
+                <div class="active-service-card">
+                    <h5 class="fw-bold mb-3"><i class="bi bi-speedometer2 text-info ms-2"></i>مانیتورینگ شبکه</h5>
+                    <p class="text-muted small">نصب و راه‌اندازی سیستم‌های مدیریت یکپارچه، مانیتورینگ شبکه و ثبت متمرکز وقایع جهت کنترل پایداری سرویس‌ها.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =========================================
+     بخش ۳: توضیحات تکمیلی (شبکه داخلی)
+========================================= -->
+<section class="py-5">
+    <div class="container">
+        <div class="intro-box shadow-lg">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h3 class="fw-bold mb-4">خدمات نصب و راه‌اندازی شبکه داخلی شرکت‌ها و سازمان‌ها</h3>
+                    <p class="opacity-75 mb-4" style="line-height: 1.8;">
+                        یکی از خدمات اصلی تک نت، پیاده‌سازی شبکه‌های درون‌سازمانی است. کلیه خدمات اکتیو و پسیو، پشتیبانی و نگهداری توسط نیروهای متخصص انجام می‌شود. همچنین جابجایی، ارتقای تجهیزات و بازطراحی شبکه با بالاترین استانداردها صورت می‌پذیرد.
+                        <br><br>
+                        <strong>تک نت</strong> آماده ارائه هرگونه مشاوره تخصصی به شرکت‌ها و سازمان‌ها می‌باشد. شما می‌توانید برای امور فنی و انفورماتیک خود به صورت تمام‌وقت یا پاره‌وقت از خدمات ما بهره‌مند شوید. ما سریع‌ترین خدمات را هنگام بروز خرابی یا قطعی شبکه تضمین می‌کنیم.
+                    </p>
+                    <div class="d-flex gap-3 flex-wrap">
+                        <a href="tel:02163877763" class="btn btn-info text-dark fw-bold px-4 py-2 rounded-pill">
+                            <i class="bi bi-headset me-2"></i>مشاوره رایگان
+                        </a>
+                        <a href="contact.html" class="btn btn-outline-light px-4 py-2 rounded-pill">
+                            ارتباط با ما
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 d-none d-lg-block text-center">
+                    <!-- می‌توانید یک آیکون بزرگ یا تصویر وکتور اینجا قرار دهید -->
+                    <i class="bi bi-building-gear text-white-50" style="font-size: 8rem;"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- =========================================
+     بخش ۴: آیا این مشکلات را دارید؟ (نیازسنجی)
+========================================= -->
+<section class="py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <img src="assets/img/What-is-a-network-And-what-is-its-use.jpg" alt="مشکلات شبکه" class="img-fluid rounded-3 shadow-lg mb-4 mb-lg-0">
+            </div>
+            <div class="col-lg-6">
+                <h2 class="fw-bold mb-4">آیا با مشکلات زیر در شبکه مواجه هستید؟</h2>
+                <p class="text-muted mb-4">
+                    اگر پاسخ شما به هر یک از سوالات زیر مثبت است، کسب‌وکار شما با کاهش بهره‌وری و هدر رفت منابع روبروست. تیم اعزام کارشناس <strong>تک نت</strong> آماده رفع این چالش‌هاست.
+                </p>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="pain-point-item"><i class="bi bi-exclamation-triangle-fill me-2"></i>قطع و وصلی مکرر ارتباط با سرور</div>
+                        <div class="pain-point-item"><i class="bi bi-folder-x me-2"></i>عدم دسترسی کارمندان به فایل‌های اشتراکی</div>
+                        <div class="pain-point-item"><i class="bi bi-virus me-2"></i>نگرانی از ویروسی شدن سیستم‌ها و باج‌افزار</div>
+                        <div class="pain-point-item"><i class="bi bi-printer-fill me-2"></i>مشکل در اتصال پرینتر و اسکنر تحت شبکه</div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="pain-point-item"><i class="bi bi-wifi-off me-2"></i>کندی شدید سرعت اینترنت و شبکه داخلی</div>
+                        <div class="pain-point-item"><i class="bi bi-shield-lock-fill me-2"></i>نیاز به محدودسازی دسترسی کاربران</div>
+                        <div class="pain-point-item"><i class="bi bi-gear-wide-connected me-2"></i>مشکل با نرم‌افزارهای مالی و حسابداری</div>
+                        <div class="pain-point-item"><i class="bi bi-headset me-2"></i>نیاز فوری به کارشناس متخصص در محل</div>
+                    </div>
+                </div>
+                <div class="mt-4 text-center text-lg-start">
+                    <a href="tel:09109694902" class="btn btn-primary px-4 py-2 rounded-pill shadow">
+                        <i class="bi bi-telephone-fill me-2"></i>اعزام فوری کارشناس 
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =========================================
+     بخش ۵: روش‌های دریافت خدمات پشتیبانی
+========================================= -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="text-center mb-5">
+            <span class="badge bg-primary mb-2">مدل‌های همکاری</span>
+            <h2 class="fw-bold">۳ روش دریافت خدمات پشتیبانی شبکه</h2>
+            <p class="text-muted">کدام روش برای کسب‌وکار شما به‌صرفه‌تر است؟</p>
+        </div>
+        <div class="row g-4">
+            <!-- روش ۱ -->
+            <div class="col-lg-4">
+                <div class="support-method-card">
+                    <div class="support-method-icon"><i class="bi bi-person-badge"></i></div>
+                    <h4 class="fw-bold mb-3">۱. استخدام نیروی تمام‌وقت</h4>
+                    <p class="text-muted small text-justify">
+                        مناسب سازمان‌های بزرگ با تعداد سرور و کلاینت بالا. کارشناس همیشه در محل حضور دارد.
+                    </p>
+                    <hr>
+                    <ul class="list-unstyled small text-secondary">
+                        <li class="mb-2 text-danger"><i class="bi bi-x-circle me-2"></i>هزینه حقوق، بیمه و سنوات بالا</li>
+                        <li class="mb-2 text-danger"><i class="bi bi-x-circle me-2"></i>محدود بودن دانش فنی به یک نفر</li>
+                        <li class="mb-2 text-success"><i class="bi bi-check-circle me-2"></i>حضور دائم در شرکت</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- روش ۲ -->
+            <div class="col-lg-4">
+                <div class="support-method-card border-primary">
+                    <div class="position-absolute top-0 end-0 bg-primary text-white px-3 py-1 rounded-bottom-start small">پیشنهاد ما</div>
+                    <div class="support-method-icon text-primary"><i class="bi bi-briefcase"></i></div>
+                    <h4 class="fw-bold mb-3">۲. قرارداد پشتیبانی (Outsource)</h4>
+                    <p class="text-muted small text-justify">
+                        عقد قرارداد سالیانه با <strong>تک نت</strong>. اعزام کارشناس طبق زمانبندی یا استقرار نیرو از طرف ما.
+                    </p>
+                    <hr>
+                    <ul class="list-unstyled small text-secondary">
+                        <li class="mb-2 text-success"><i class="bi bi-check-circle me-2"></i>هزینه کمتر از استخدام نیرو</li>
+                        <li class="mb-2 text-success"><i class="bi bi-check-circle me-2"></i>دسترسی به تیم تخصصی (امنیت، سرور و...)</li>
+                        <li class="mb-2 text-success"><i class="bi bi-check-circle me-2"></i>بدون دغدغه بیمه و مالیات حقوق</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- روش ۳ -->
+            <div class="col-lg-4">
+                <div class="support-method-card">
+                    <div class="support-method-icon"><i class="bi bi-tools"></i></div>
+                    <h4 class="fw-bold mb-3">۳. اعزام کارشناس موردی</h4>
+                    <p class="text-muted small text-justify">
+                        بدون قرارداد؛ هر زمان شبکه خراب شد تماس می‌گیرید و هزینه همان سرویس را می‌پردازید.
+                    </p>
+                    <hr>
+                    <ul class="list-unstyled small text-secondary">
+                        <li class="mb-2 text-success"><i class="bi bi-check-circle me-2"></i>مناسب شرکت‌های کوچک و کم‌استهلاک</li>
+                        <li class="mb-2 text-danger"><i class="bi bi-x-circle me-2"></i>عدم سرویس‌دهی پیشگیرانه (PM)</li>
+                        <li class="mb-2 text-danger"><i class="bi bi-x-circle me-2"></i>هزینه بالاتر در هر بار اعزام</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =========================================
+     بخش ۶: چرا تک نت؟ (مزیت‌های رقابتی)
+========================================= -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="fw-bold text-center mb-5">چرا برای اعزام کارشناس با <span class="text-info">تک نت</span> تماس بگیرید؟</h2>
+        <div class="row g-3">
+            <div class="col-md-4 col-sm-6">
+                <div class="feature-grid-item">
+                    <i class="bi bi-speedometer2 text-warning fs-3 mb-2"></i>
+                    <h6>سرعت و دقت بالا</h6>
+                    <p class="small text-muted m-0">رفع مشکل در سریع‌ترین زمان ممکن توسط ۱۰+ کارشناس مجرب.</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="feature-grid-item">
+                    <i class="bi bi-award text-primary fs-3 mb-2"></i>
+                    <h6>تجربه ۱۰ ساله</h6>
+                    <p class="small text-muted m-0">اجرای بیش از ۴۵۰ پروژه موفق در کسب‌وکارهای متنوع.</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="feature-grid-item">
+                    <i class="bi bi-shield-lock text-success fs-3 mb-2"></i>
+                    <h6>حفظ محرمانگی (NDA)</h6>
+                    <p class="small text-muted m-0">تضمین عدم افشای اطلاعات و پسوردهای سازمان شما در قرارداد.</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="feature-grid-item">
+                    <i class="bi bi-file-earmark-bar-graph text-info fs-3 mb-2"></i>
+                    <h6>گزارش ماهیانه (KPI)</h6>
+                    <p class="small text-muted m-0">ارائه گزارش شفاف از کارهای انجام شده و وضعیت سلامت شبکه.</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="feature-grid-item">
+                    <i class="bi bi-hdd-rack text-secondary fs-3 mb-2"></i>
+                    <h6>تامین تجهیزات</h6>
+                    <p class="small text-muted m-0">همکاری تجاری با تامین‌کنندگان سخت‌افزار جهت کاهش هزینه‌های خرید شما.</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="feature-grid-item">
+                    <i class="bi bi-headset text-danger fs-3 mb-2"></i>
+                    <h6>پشتیبانی ۲۴×۷</h6>
+                    <p class="small text-muted m-0">دسترسی به کارشناس حتی در روزهای تعطیل و ساعات غیراداری.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- بنر تماس ریموت -->
+        <div class="mt-5 p-4 bg-dark text-white rounded-3 shadow text-center">
+            <h4 class="fw-bold"><i class="bi bi-display me-2"></i>خدمات پشتیبانی ریموت (از راه دور)</h4>
+            <p class="mb-3 opacity-75">آیا می‌دانستید بسیاری از مشکلات نرم‌افزاری بدون نیاز به حضور فیزیکی و تنها با ریموت حل می‌شوند؟ این روش هزینه و زمان شما را کاهش می‌دهد.</p>
+            <a href="tel:09109694902" class="btn btn-outline-light rounded-pill px-4">مشاوره ریموت </a>
+        </div>
+    </div>
+</section>
+
+<!-- =========================================
+     بخش ۷: سوالات متداول پشتیبانی (FAQ)
+========================================= -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="fw-bold text-center mb-4">سوالات متداول خدمات شبکه</h2>
+        <div class="accordion network-faq" id="networkFaq">
+            <!-- سوال ۱ -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#nf1">
+                        آیا خدمات تک نت شامل محدود کردن اینترنت کارمندان می‌شود؟
+                    </button>
+                </h2>
+                <div id="nf1" class="accordion-collapse collapse" data-bs-parent="#networkFaq">
+                    <div class="accordion-body text-muted">
+                        بله، دقیقا. ما می‌توانیم اینترنت را برای افراد خاصی محدود کنیم، سقف دانلود روزانه تعیین کنیم یا دسترسی به سایت‌های خاصی را ببندیم. این سیاست‌ها توسط مدیریت تعیین و توسط ما اجرا می‌شود.
+                    </div>
+                </div>
+            </div>
+            <!-- سوال ۲ -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#nf2">
+                        مدت زمان قراردادهای پشتیبانی چقدر است؟
+                    </button>
+                </h2>
+                <div id="nf2" class="accordion-collapse collapse" data-bs-parent="#networkFaq">
+                    <div class="accordion-body text-muted">
+                        معمولاً قراردادها یک ساله هستند. اما برای شروع همکاری و ایجاد اعتماد، می‌توانیم ابتدا یک قرارداد آزمایشی ۳ ماهه منعقد کنیم و سپس آن را تمدید نماییم.
+                    </div>
+                </div>
+            </div>
+            <!-- سوال ۳ -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#nf3">
+                        ساعات کاری اعزام کارشناس چگونه است؟
+                    </button>
+                </h2>
+                <div id="nf3" class="accordion-collapse collapse" data-bs-parent="#networkFaq">
+                    <div class="accordion-body text-muted">
+                        برای خدمات عادی، از ساعت ۹ صبح تا ۹ شب در تمام روزهای هفته (حتی تعطیلات) پاسخگو هستیم. برای مشتریان دارای قرارداد، خدمات طبق توافق (حتی ۲۴ ساعته) ارائه می‌شود.
+                    </div>
+                </div>
+            </div>
+            <!-- سوال ۴ -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#nf4">
+                        آیا مشکلات نرم‌افزارهای حسابداری (مثل هلو، سپیدار) را هم حل می‌کنید؟
+                    </button>
+                </h2>
+                <div id="nf4" class="accordion-collapse collapse" data-bs-parent="#networkFaq">
+                    <div class="accordion-body text-muted">
+                        پشتیبانی تخصصی این نرم‌افزارها با شرکت سازنده آن‌هاست. اما کارشناسان ما بستر شبکه، قفل سخت‌افزاری و ارتباط سرور را برای اجرای صحیح آن‌ها تضمین می‌کنند و با پشتیبانی آن شرکت‌ها تعامل فنی خواهند داشت.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="tech-stack shadow-lg">
+                <div class="row align-items-center">
+                    <div class="col-lg-7">
+                        <h2 class="fw-bold mb-4 text-info">چرا شبکه شما به بهینه‌سازی نیاز دارد؟</h2>
+                        <div class="feature-box">
+                            <h5 class="fw-bold">افزایش امنیت اطلاعات</h5>
+                            <p class="small opacity-75">بستن نفوذها و لایه‌بندی دسترسی کارمندان به اینترنت و فایل‌ها.</p>
+                        </div>
+                        <div class="feature-box">
+                            <h5 class="fw-bold">پایداری بدون قطعی</h5>
+                            <p class="small opacity-75">مانیتورینگ هوشمند تجهیزات برای جلوگیری از توقف کار در شرکت.</p>
+                        </div>
+                        <div class="feature-box">
+                            <h5 class="fw-bold">مدیریت پهنای باند</h5>
+                            <p class="small opacity-75">کنترل مصرف اینترنت و اولویت‌بندی نرم‌افزارهای حیاتی اداری.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="modern-card bg-white text-dark p-4">
+                            <h5 class="fw-bold text-center mb-4 text-primary">درخواست بازدید رایگان</h5>
+                            <p class="small text-center text-muted mb-4">تیم فنی مهندس مهدوی جهت عیب‌یابی و برآورد هزینه به محل شما اعزام می‌شود.</p>
+                            <a href="contact.html" class="btn btn-main w-100 py-3">رزرو وقت بازدید حضوری</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-5 bg-dark text-white text-center">
+        <div class="container">
+            <p class="mb-0 small opacity-50">تخصص ما، امنیت و سرعت شبکه شماست | TECHNET</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
